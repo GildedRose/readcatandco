@@ -1,11 +1,21 @@
-const { User, Product } = require('../models');
+const { User, Product, Category } = require('../models');
 const { signToken } = require('../utils/auth');
 const { AuthenticationError } = require('apollo-server-express');
 
 const resolvers = {
     Query: {
-        user: async () => {
-            return User.find().select('-__v -password');
+        user: async (parent, { email }) => {
+            return User.findOne({ email }).select('-__v -password');
+        },
+        product: async (parent, { _id }) => {
+            return await Product.findById(_id)
+        },
+        products: async (parent, { name }) => {
+            const params = {};
+            return await Product.find(params);
+        },
+        categories: async () => {
+            return await Category.find();
         }
     },
 
@@ -26,7 +36,7 @@ const resolvers = {
 
             return { token, user };
         },
-        addProduct: async(parent, args) => {
+        addProduct: async (parent, args) => {
             const product = await Product.create(args);
 
             return product;
