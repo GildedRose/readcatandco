@@ -7,6 +7,9 @@ const resolvers = {
         user: async (parent, { email }) => {
             return User.findOne({ email }).select('-__v -password');
         },
+        users: async () => {
+            return User.find().select('-__v -password')
+        },
         product: async (parent, { _id }) => {
             return await Product.findById(_id)
         },
