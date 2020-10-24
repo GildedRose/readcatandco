@@ -25,6 +25,8 @@ const userSchema = new Schema({
 
 });
 
+// needs password hashing
+
 const User = model('User', userSchema);
 
 module.exports = User;
