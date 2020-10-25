@@ -26,10 +26,9 @@ db.once('open', async () => {
                 
                 Details:
                 
-                ∙ Made in the USA
-                ∙ Design by Eradura // Hand Printed by Noisy Neighbors Print
                 ∙ Vintage Red: 100% Cotton // Black: 100% Cotton Slub Chambray 
                 ∙ Approx. 21.5" square`,
+            origin: `Made in the USA, by Eradura // Hand Printed by Noisy Neighbors Print`,
             image: 'dogpack-red00-220x.jpg',
             category: categories[0]._id,
             price: 28.00,
@@ -42,9 +41,8 @@ db.once('open', async () => {
 
                 100% Palm
                 
-                3” brim
-                
-                Made in Mexico`,
+                3” brim`,
+            origin: `Made in Mexico`,
             image: 'bajaloreto00-540x.jpg',
             category: categories[0]._id,
             price: 70.00,
@@ -55,6 +53,7 @@ db.once('open', async () => {
             category: categories[1]._id,
             description:
                 `1.25" wide hard enamel pin, gold metal filled with pink glitter, paired with a backing card and sealed in a clear sleeve.`,
+            origin: `N/A`,
             image: 'fearlessfemmes00-360x.jpg',
             price: 11.00,
             quantity: 20
@@ -64,6 +63,7 @@ db.once('open', async () => {
             category: categories[1]._id,
             description:
                 `1.35" wide hard enamel pin in rose gold metal with white and rose inks, paired with a backing card and sealed in a clear sleeve`,
+            origin: `N/A`,
             image: 'girlsunite00-360x.jpg',
             price: 12.00,
             quantity: 5
@@ -75,6 +75,7 @@ db.once('open', async () => {
                 `Logic? Reason? You don't need that kind of negativity in your life. When you just need to peace out and be a mermaid for a while, we've got your number.
 
                 1.25" x 0.5" enamel pin.`,
+            origin: `N/A`,
             image: 'doesntmake00-360x.jpg',
             price: 12.00,
             quantity: 3
@@ -89,9 +90,8 @@ db.once('open', async () => {
                 
                 Lined, embroidered
                 
-                Glitter vinyl zipper tab details
-                
-                Made in Austin by Realm`,
+                Glitter vinyl zipper tab details`,
+            origin: `Made in Austin by Realm`,
             image: 'rainbowsmiler00-360x.jpg',
             price: 29.95,
             quantity: 15
@@ -103,6 +103,7 @@ db.once('open', async () => {
                 `A truly unique piece with stunning details and colors that remind us of desert sands. Handwoven in natural palm with colors of sienna and black. 
 
                 Measurements: 10 1/4” In Diameter and 19.5” L from top of handle to bottom of bag`,
+            origin: ``,
             image: 'vintagedesert00-360x.jpg',
             price: 68.00,
             quantity: 3
@@ -126,6 +127,7 @@ db.once('open', async () => {
                 Paraben Free / Phthalate Free / Sulfate Free / Cruelty Free / Vegan 
                 
                 Ingredients: Aloe Barbadensis (Aloe Vera) Leaf Juice, Water (Aqua), Sodium PCA, Potassium Sorbate, Sodium Benzoate, Mentha Spicata (Spearmint) Oil, Eucalyptus Globulus Leaf Oil, Cinnamomum Camphora (Camphor) Bark Oil, Sorbitan Oleate Decylglucoside Crosspolymer, Sodium Chloride, Glycerin, Opuntia Ficus-Indica (Prickly Pear) Fruit Extract, Caprylic/Capric Triglyceride, Cucumis Sativus (Cucumber) Fruit Extract`,
+            origin: `N/A`,
             image: 'sundayspray00-370x.jpg',
             price: 22.00,
             quantity: 25
@@ -134,6 +136,7 @@ db.once('open', async () => {
             name: 'Gold Star',
             category: categories[4]._id,
             description: 'Moon ornament wrapped with gold stars and flowers',
+            origin: `N/A`,
             image: 'goldstar00-540x.jpg',
             price: 7.00,
             quantity: 30
@@ -144,16 +147,14 @@ db.once('open', async () => {
             description:
                 `Sleepy Moons is original artwork screen printed by hand on 100% recycled cotton and is thicker and more absorbent than your average kitchen towel. Fabulous to use as dish towels, as an accent cloth for your dining table, or anything else you can think of!
 
-                measures 30"x30"
+               measures 30"x30"
                screen printed by hand with permanent textile ink in black
                tied with hemp twine and a branded tag
-                
                
                WASHING AND CARE
                
-               The print on this towel is permanent and meant to last. To best preserve the this screen printed cotton good we suggest machine washing on cold in a gentle cycle. Dry on low heat, or lay flat to dry.
-               
-               Made in Georgia`,
+               The print on this towel is permanent and meant to last. To best preserve the this screen printed cotton good we suggest machine washing on cold in a gentle cycle. Dry on low heat, or lay flat to dry.`,
+            origin: `Made in Georgia`,
             image: 'sleepymoon00-360x.png',
             price: 26.00,
             quantity: 15
@@ -165,6 +166,7 @@ db.once('open', async () => {
                 `We’ve all had these moments...
 
                 11 oz mug`,
+            origin: `N/A`,
             image: 'disappointedmug00-360x.jpg',
             price: 15.00,
             quantity: 10
@@ -173,9 +175,7 @@ db.once('open', async () => {
             name: 'Seeing Eye Throw Pillow Cover',
             category: categories[4]._id,
             description:
-                `These lovelies are screen printed on 100% canvas pillow covers and made in the US. Refresh your home with some striking new throw pillow designs!
-
-                - 100% cotton canvas, made in the US
+                `These lovelies are screen printed on 100% canvas pillow covers. Refresh your home with some striking new throw pillow designs!
                 
                 - measures 18"x18" (insert measures 20"x20")
                 
@@ -184,6 +184,7 @@ db.once('open', async () => {
                 - Screen printed with permanent black ink
                 
                 *Washing Instructions*: Spot cleaning is always best, but you can also machine wash in cold water. Due to the nature of cotton canvas some shrinkage is to be expected. Air dry or tumble dry on low.`,
+            origin: `Made in the USA`,
             image: 'seeingeye00-540x.jpg',
             price: 45.00,
             quantity: 12
