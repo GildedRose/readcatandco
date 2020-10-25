@@ -5,11 +5,11 @@ db.once('open', async () => {
     await Category.deleteMany();
 
     const categories = await Category.insertMany([
-        { name: 'Food' },
-        { name: 'Household Supplies' },
-        { name: 'Electronics' },
-        { name: 'Books' },
-        { name: 'Toys' }
+        { name: 'Apparel' },
+        { name: 'Accessories' },
+        { name: 'Bags' },
+        { name: 'Beauty' },
+        { name: 'Home Deco' }
     ]);
 
     console.log('categories seeded');
@@ -18,111 +18,175 @@ db.once('open', async () => {
 
     const products = await Product.insertMany([
         {
-            name: 'Tin of Cookies',
+            name: 'Dog Pack Chambray Bandana in Vintage Red',
             description:
-                'Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos.',
-            image: 'cookie-tin.jpg',
+                `Protectors of the spirit -- a guardian symbol for your life & home
+
+                Hang on the wall, tie around your neck, tuck in a back pocket on your trails. Hand printed on black chambray & vintage red cotton with serged contrast hem.
+                
+                Details:
+                
+                ∙ Made in the USA
+                ∙ Design by Eradura // Hand Printed by Noisy Neighbors Print
+                ∙ Vintage Red: 100% Cotton // Black: 100% Cotton Slub Chambray 
+                ∙ Approx. 21.5" square`,
+            image: 'dogpack-red00-220x.jpg',
             category: categories[0]._id,
-            price: 2.99,
-            quantity: 500
+            price: 28.00,
+            quantity: 15
         },
         {
-            name: 'Canned Coffee',
+            name: 'Baja Loreto 2.0',
             description:
-                'Praesent sed lacinia mauris. Nulla congue nibh magna, at feugiat nunc scelerisque quis. Donec iaculis rutrum vulputate. Suspendisse lectus sem, vulputate ac lectus sed, placerat consequat dui.',
-            image: 'canned-coffee.jpg',
+                `Woven and Sewn Palm handmade by artisans in Mexico. Its traditional fedora style crown with a relatively short brim. The custom piping consisting of discarded and up-cycled fabric.
+
+                100% Palm
+                
+                3” brim
+                
+                Made in Mexico`,
+            image: 'bajaloreto00-540x.jpg',
             category: categories[0]._id,
-            price: 1.99,
-            quantity: 500
+            price: 70.00,
+            quantity: 5
         },
         {
-            name: 'Toilet Paper',
+            name: 'Fearless Femme Pink Glitter Pin',
             category: categories[1]._id,
             description:
-                'Donec volutpat erat erat, sit amet gravida justo sodales in. Phasellus tempus euismod urna. Proin ultrices nisi ut ipsum congue, vitae porttitor libero suscipit. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Aliquam lacinia a nisi non congue.',
-            image: 'toilet-paper.jpg',
-            price: 7.99,
+                `1.25" wide hard enamel pin, gold metal filled with pink glitter, paired with a backing card and sealed in a clear sleeve.`,
+            image: 'fearlessfemmes00-360x.jpg',
+            price: 11.00,
             quantity: 20
         },
         {
-            name: 'Handmade Soap',
+            name: 'Girls Unite Pin',
             category: categories[1]._id,
             description:
-                'Praesent placerat, odio vel euismod venenatis, lectus arcu laoreet felis, et fringilla sapien turpis vestibulum nisl.',
-            image: 'soap.jpg',
-            price: 3.99,
-            quantity: 50
+                `1.35" wide hard enamel pin in rose gold metal with white and rose inks, paired with a backing card and sealed in a clear sleeve`,
+            image: 'girlsunite00-360x.jpg',
+            price: 12.00,
+            quantity: 5
         },
         {
-            name: 'Set of Wooden Spoons',
+            name: `Shit Doesn’t Have To Make Sense Pin`,
             category: categories[1]._id,
             description:
-                'Vivamus ut turpis in purus pretium mollis. Donec turpis odio, semper vel interdum ut, vulputate at ex. Duis dignissim nisi vel tortor imperdiet finibus. Aenean aliquam sagittis rutrum.',
-            image: 'wooden-spoons.jpg',
-            price: 14.99,
-            quantity: 100
+                `Logic? Reason? You don't need that kind of negativity in your life. When you just need to peace out and be a mermaid for a while, we've got your number.
+
+                1.25" x 0.5" enamel pin.`,
+            image: 'doesntmake00-360x.jpg',
+            price: 12.00,
+            quantity: 3
         },
         {
-            name: 'Camera',
+            name: 'Rainbow Smiler Clutch',
             category: categories[2]._id,
             description:
-                'Vestibulum risus metus, luctus non tortor quis, tincidunt consectetur ex. Nullam vitae lobortis ligula, ut sagittis massa. Curabitur consectetur, tellus at pulvinar venenatis, erat augue cursus erat, eu ullamcorper eros lectus ultrices ipsum. Integer rutrum, augue vitae auctor venenatis, turpis turpis elementum orci, at sagittis risus mi a leo.',
-            image: 'camera.jpg',
-            price: 399.99,
-            quantity: 30
+                `This rainbow smiley face clutch is full of happiness and pride.  A very cheerful way to carry around all your daily necessities.
+
+                9.5"x7"
+                
+                Lined, embroidered
+                
+                Glitter vinyl zipper tab details
+                
+                Made in Austin by Realm`,
+            image: 'rainbowsmiler00-360x.jpg',
+            price: 29.95,
+            quantity: 15
         },
         {
-            name: 'Tablet',
+            name: 'Vintage Desert Daze Palm Tote',
             category: categories[2]._id,
             description:
-                'In sodales, ipsum quis ultricies porttitor, tellus urna aliquam arcu, eget venenatis purus ligula ut nisi. Fusce ut felis dolor. Mauris justo ante, aliquet non tempus in, tempus ac lorem. Aliquam lacinia dolor eu sem eleifend ultrices. Etiam mattis metus metus. Sed ligula dui, placerat non turpis vitae, suscipit volutpat elit. Phasellus sagittis, diam elementum suscipit fringilla, libero mauris scelerisque ex, ac interdum diam erat non sapien.',
-            image: 'tablet.jpg',
-            price: 199.99,
-            quantity: 30
+                `A truly unique piece with stunning details and colors that remind us of desert sands. Handwoven in natural palm with colors of sienna and black. 
+
+                Measurements: 10 1/4” In Diameter and 19.5” L from top of handle to bottom of bag`,
+            image: 'vintagedesert00-360x.jpg',
+            price: 68.00,
+            quantity: 3
         },
         {
-            name: 'Tales at Bedtime',
+            name: 'Sunday Spray / Cooling Aloe Mist',
             category: categories[3]._id,
             description:
-                'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum ornare diam quis eleifend rutrum. Aliquam nulla est, volutpat non enim nec, pharetra gravida augue. Donec vitae dictum neque. Pellentesque arcu lorem, fringilla non ligula ac, tristique bibendum erat. Ut a semper nibh. Quisque a mi et mi tempor ultricies. Maecenas eu ipsum eu enim hendrerit accumsan at euismod urna.',
-            image: 'bedtime-book.jpg',
-            price: 9.99,
-            quantity: 100
+                `When your skin is hot and bothered, but you're just trying to chill. Instantly soothe sunburned, stressed-out skin with cooling, moisturizing ingredients like natural spearmint, aloe, and cucumber.  We love the instant cooling effect from spearmint, eucalyptus, and cucumber, with healing relief from aloe and prickly pear. Sunday Spray is like a glass of ice water when you need it most. 
+
+                Use it when
+                The day after the beach day, post-spin class, any time you need an uplifting, refreshing moment.
+                
+                Directions
+                Mist liberally over face and body for instant cooling relief and hydration. Chill before use for an especially refreshing moment. Do not apply to broken skin. Re-apply as often as you'd like.               
+                
+                Size: 3.0 oz
+                
+                Smells of cucumber + mint
+                
+                Paraben Free / Phthalate Free / Sulfate Free / Cruelty Free / Vegan 
+                
+                Ingredients: Aloe Barbadensis (Aloe Vera) Leaf Juice, Water (Aqua), Sodium PCA, Potassium Sorbate, Sodium Benzoate, Mentha Spicata (Spearmint) Oil, Eucalyptus Globulus Leaf Oil, Cinnamomum Camphora (Camphor) Bark Oil, Sorbitan Oleate Decylglucoside Crosspolymer, Sodium Chloride, Glycerin, Opuntia Ficus-Indica (Prickly Pear) Fruit Extract, Caprylic/Capric Triglyceride, Cucumis Sativus (Cucumber) Fruit Extract`,
+            image: 'sundayspray00-370x.jpg',
+            price: 22.00,
+            quantity: 25
         },
         {
-            name: 'Spinning Top',
+            name: 'Gold Star',
             category: categories[4]._id,
-            description: 'Ut vulputate hendrerit nibh, a placerat elit cursus interdum.',
-            image: 'spinning-top.jpg',
-            price: 1.99,
-            quantity: 1000
+            description: 'Moon ornament wrapped with gold stars and flowers',
+            image: 'goldstar00-540x.jpg',
+            price: 7.00,
+            quantity: 30
         },
         {
-            name: 'Set of Plastic Horses',
-            category: categories[4]._id,
-            description:
-                'Sed a mauris condimentum, elementum enim in, rhoncus dui. Phasellus lobortis leo odio, sit amet pharetra turpis porta quis.',
-            image: 'plastic-horses.jpg',
-            price: 2.99,
-            quantity: 1000
-        },
-        {
-            name: 'Teddy Bear',
-            category: categories[4]._id,
-            description:
-                'Vestibulum et erat finibus erat suscipit vulputate sed vitae dui. Ut laoreet tellus sit amet justo bibendum ultrices. Donec vitae felis vestibulum, congue augue eu, finibus turpis.',
-            image: 'teddy-bear.jpg',
-            price: 7.99,
-            quantity: 100
-        },
-        {
-            name: 'Alphabet Blocks',
+            name: 'Sleepy Moons Tea Towel',
             category: categories[4]._id,
             description:
-                'Morbi consectetur viverra urna, eu fringilla turpis faucibus sit amet. Suspendisse potenti. Donec at dui ac sapien eleifend hendrerit vel sit amet lectus.',
-            image: 'alphabet-blocks.jpg',
-            price: 9.99,
-            quantity: 600
+                `Sleepy Moons is original artwork screen printed by hand on 100% recycled cotton and is thicker and more absorbent than your average kitchen towel. Fabulous to use as dish towels, as an accent cloth for your dining table, or anything else you can think of!
+
+                measures 30"x30"
+               screen printed by hand with permanent textile ink in black
+               tied with hemp twine and a branded tag
+                
+               
+               WASHING AND CARE
+               
+               The print on this towel is permanent and meant to last. To best preserve the this screen printed cotton good we suggest machine washing on cold in a gentle cycle. Dry on low heat, or lay flat to dry.
+               
+               Made in Georgia`,
+            image: 'sleepymoon00-360x.png',
+            price: 26.00,
+            quantity: 15
+        },
+        {
+            name: 'Disappointed But Not Surprised Mug',
+            category: categories[4]._id,
+            description:
+                `We’ve all had these moments...
+
+                11 oz mug`,
+            image: 'disappointedmug00-360x.jpg',
+            price: 15.00,
+            quantity: 10
+        },
+        {
+            name: 'Seeing Eye Throw Pillow Cover',
+            category: categories[4]._id,
+            description:
+                `These lovelies are screen printed on 100% canvas pillow covers and made in the US. Refresh your home with some striking new throw pillow designs!
+
+                - 100% cotton canvas, made in the US
+                
+                - measures 18"x18" (insert measures 20"x20")
+                
+                - envelope closure so that you can easily insert pillow
+                
+                - Screen printed with permanent black ink
+                
+                *Washing Instructions*: Spot cleaning is always best, but you can also machine wash in cold water. Due to the nature of cotton canvas some shrinkage is to be expected. Air dry or tumble dry on low.`,
+            image: 'seeingeye00-540x.jpg',
+            price: 45.00,
+            quantity: 12
         }
     ]);
 
