@@ -10,6 +10,11 @@ const retiredSchema = new Schema({
         type: String,  // should say 'sold out'
         required: true,
     },
+    // designer name or 'Made in X' information can go here to reduce description length
+    origin: {
+        type: String,
+        required: true
+    },
     description: {
         type: String
     },
