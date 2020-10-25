@@ -1,3 +1,36 @@
+# Red Cat and Co
+
+# Description
+![Github license](http://img.shields.io/badge/license-MIT-blue.svg)
+
+## Table of Contents
+  * [Installation](#installation)
+  * [Usage](#usage)
+  * [License](#license)
+  * [Contributing](#contributing)
+  * [Questions](#questions)
+  * [React](#react)
+
+## Installation
+Download a copy of this repo to a directory of your choice. To install, you will need to run `npm i` or `npm install` to get all the dependencies running. Following proper installation of the dependencies, you will type `npm start` on the root directory terminal to start the server.
+
+## Usage
+
+## License
+![Github license](http://img.shields.io/badge/license-MIT-blue.svg) This project is covered by the MIT license.
+
+## Contributing
+At this time, we are not seeking contributions to this application for `Red Cat and Co`.
+
+## Questions
+Please contact [Red Cat and Co](https://redcatandco.com/) for immediate questions regarding site content.
+The technical questions and concerns, the available developers for the site are 
+[GildedRose](https://github.com/GildedRose),
+[ericy98](https://github.com/ericy98),
+[Devmadia](https://github.com/Devmadia),
+[Dblply21](https://github.com/Dblply21).
+
+## React 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts
