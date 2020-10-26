@@ -3,7 +3,7 @@
 // import { insideBus } from './assets/cover/insideBus.jpg';
 // //import Styles from 'styled-components';
 
-// const Styles 
+// const Styles =
 //     .jumbo {
 //         background: URL(${insideBus}) no-repeat fixed bottom;
 //         background-size: cover;

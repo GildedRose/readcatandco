@@ -1,18 +1,71 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { Container, Row, Col } from 'react-bootstrap';
+import { useMutation } from '@apollo/react-hooks';
+import { LOGIN_USER } from '../utils/mutations';
+import Auth from '../utils/auth';
 
+function LogIn() {
+  const [formState, setFormState] = useState({ email: '', password: '' });
+  const [login, { error }] = useMutation(LOGIN_USER);
 
+  const handleChange = (event) => {
+    const { name, value } = event.target;
 
-export const LogIn = () => (
-  <Container>
-    <Row>
-      <Col>
-      <div>
-          <h2>Log In</h2>
-          <p>Cat ipsum dolor sit amet, chew foot get suspicious of own shadow then go play with toilette paper. Climb a tree, wait for a fireman jump to fireman then scratch his face. Roll over and sun my belly. I vomit in the bed in the middle of the night lick left leg for ninety minutes, still dirty what the heck just happened, something feels fishy so eat from dog's food.</p>  
-        </div>
-      </Col>
-    </Row>
-  </Container>
-        
-)
+    setFormState({
+      ...formState,
+      [name]: value,
+    });
+  };
+
+  const handleFormSubmit = async (event) => {
+    event.preventDefault();
+
+    try {
+      const { data } = await login({
+        variables: { ...formState }
+      });
+
+      Auth.login(data.login.token);
+    } catch (e) {
+      console.error(e);
+    }
+  }
+
+  return (
+    <Container>
+      <Row>
+        <Col>
+          <div>
+            <h2>Log In</h2>
+            <form onSubmit={handleFormSubmit}>
+              <input
+                className='form-input'
+                placeholder='Your email'
+                name='email'
+                type='email'
+                id='email'
+                value={formState.email}
+                onChange={handleChange}
+              />
+              <input
+                className='form-input'
+                placeholder='********'
+                name='password'
+                type='password'
+                id='password'
+                value={formState.password}
+                onChange={handleChange}
+              />
+              <button type='submit'>
+                Submit
+            </button>
+            </form>
+            {error && <div>Login failed.</div>}
+          </div>
+        </Col>
+      </Row>
+    </Container>
+  )
+}
+
+export default LogIn;
