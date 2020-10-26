@@ -12,8 +12,7 @@ const productSchema = new Schema({
     },
     // designer name or 'Made in X' information can go here to reduce description length
     origin: {
-        type: String,
-        required: true
+        type: String
     },
     description: {
         type: String
