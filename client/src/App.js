@@ -9,6 +9,7 @@ import { CreateAccount } from './components/CreateAccount';
 import { NoMatch } from './components/NoMatch';
 import { Layout } from './components/Layouts';
 import { NavigationBar } from './components/Nav/Nav.js';
+import { FooterBar } from './components/Footer/Footer.js'
 //import { Jumbotron } from './components/Jumbotron';
 /*import { Footer } from './components/Footer';*/
 import 'bootstrap/dist/css/bootstrap.min.css';
@@ -38,6 +39,7 @@ class App extends Component {
               </Switch>
             </Router>
           </Layout>
+          <FooterBar />
         </React.Fragment>
       </ApolloProvider>
     )
