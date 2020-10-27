@@ -6,11 +6,12 @@ import { About } from './components/About';
 import { ContactUs } from './components/ContactUs';
 import LogIn from './components/LogIn'
 import CreateAccount from './components/CreateAccount';
+import Profile from './components/Profile';
 import { NoMatch } from './components/NoMatch';
 import { Layout } from './components/Layouts';
 import { NavigationBar } from './components/Nav/Nav.js';
 //import { Jumbotron } from './components/Jumbotron';
-/*import { Footer } from './components/Footer';*/
+import Footer from './components/Footer';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import { ApolloProvider } from '@apollo/react-hooks';
 import ApolloClient from 'apollo-boost';
@@ -34,8 +35,10 @@ class App extends Component {
                 <Route path="/ContactUs" component={ContactUs} />
                 <Route path="/LogIn" component={LogIn} />
                 <Route path="/CreateAccount" component={CreateAccount} />
+                <Route path="/profile/:email?" component={Profile} />
                 <Route component={NoMatch} />
               </Switch>
+              <Footer />
             </Router>
           </Layout>
         </React.Fragment>
