@@ -1,10 +1,10 @@
 import React from 'react';
-import { insideBus } from './assets/cover/insideBus.jpg';
+
 
 export const Home = () => (
 <section className="my-5">
       <h1 id="about">Who am I?</h1>
-      <img src={insideBus} className="my-2" style={{ width: "100%" }} alt="cover" />
+      <img src='/assets/cover/insideBus.jpg' className="my-2" style={{ width: "100%" }} alt="cover" />
       <div className="my-2">
         <p>
           Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec bibendum turpis sed ex
@@ -17,4 +17,4 @@ export const Home = () => (
         </p>
       </div>
     </section>
-)
+) 
