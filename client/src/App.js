@@ -5,7 +5,7 @@ import { ShopAll } from './components/ShopAll';
 import { About } from './components/About';
 import { ContactUs } from './components/ContactUs';
 import LogIn from './components/LogIn'
-import { CreateAccount } from './components/CreateAccount';
+import CreateAccount from './components/CreateAccount';
 import { NoMatch } from './components/NoMatch';
 import { Layout } from './components/Layouts';
 import { NavigationBar } from './components/Nav/Nav.js';
