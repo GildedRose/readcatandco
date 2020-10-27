@@ -5,5 +5,10 @@
     background-image: url("./insideBus.jpg");
     background-size: cover;
     background-position: center;
+    opacity: 0.50;
+}
 
+h1 {
+    color: black;
+    opacity: 1;
 }
