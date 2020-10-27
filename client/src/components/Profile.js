@@ -4,7 +4,7 @@ import { useQuery } from '@apollo/react-hooks';
 import { QUERY_USER } from '../utils/queries';
 import Auth from '../utils/auth';
 
-const Profile = (props) => {
+const Profile = () => {
 
     const { email: userParam } = useParams();
 
@@ -12,10 +12,10 @@ const Profile = (props) => {
         variables: { email: userParam }
     });
 
-    const user =  data?.user || {};
+    const user = data?.user || {};
 
     if (loading) {
-        return <div>Loading</div>
+        return <div>Loading...</div>;
     }
 
     if (!user?.email) {

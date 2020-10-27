@@ -23,11 +23,12 @@ const typeDefs = gql`
     }
 
     type Auth {
-        token: ID
+        token: ID!
         user: User
     }
 
     type Query {
+        me: User
         user(email: String!): User
         users: [User]
         product(_id: ID!): Product
