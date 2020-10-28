@@ -1,8 +1,6 @@
 import React from 'react';
 import { Container, Row, Col } from 'react-bootstrap';
 
-
-
 export const CreateAccount = () => (
   <Container>
     <Row>
@@ -14,5 +12,4 @@ export const CreateAccount = () => (
       </Col>
     </Row>
   </Container>
-        
 )
