@@ -4,20 +4,20 @@ const secret = 'mysecretsshhhhh';
 const expiration = '2h';
 
 module.exports = {
-    authMiddleware: function({ req }) {
+    authMiddleware: function ({ req }) {
         // token sent to 
-        let token = req.body.token  || req.query.token || req.headers.authorization;
+        let token = req.body.token || req.query.token || req.headers.authorization;
 
         // seperate "bearer" from "<tokenvalue>"
         if (req.headers.authorization) {
-            token = token  
+            token = token
                 .split(' ')
                 .pop()
                 .trim();
         }
 
         // return as is
-        if(!token) {
+        if (!token) {
             return req;
         }
 
@@ -31,8 +31,8 @@ module.exports = {
         // return updated request object
         return req;
     },
-    signToken: function({ username, email, _id }) {
-        const payload = { username, email, _id };
+    signToken: function ({ firstName, email, _id }) {
+        const payload = { firstName, email, _id };
 
         return jwt.sign({ data: payload }, secret, { expiresIn: expiration });
     }

@@ -1,7 +1,11 @@
 import React from 'react';
 import { Container, Row, Col } from 'react-bootstrap';
 
-
+const Mailto = ({ email, subject, body, children }) => {
+  return (
+    <a href={`mailto:${email}?subject=${encodeURIComponent(subject) || ''}&body=${encodeURIComponent(body) || ''}`}>{children}</a>
+  );
+};
 
 export const ContactUs = () => (
   <Container>
@@ -9,10 +13,18 @@ export const ContactUs = () => (
       <Col>
       <div>
           <h2>Contact Us</h2>
-          <p>Cat ipsum dolor sit amet, chew foot get suspicious of own shadow then go play with toilette paper. Climb a tree, wait for a fireman jump to fireman then scratch his face. Roll over and sun my belly. I vomit in the bed in the middle of the night lick left leg for ninety minutes, still dirty what the heck just happened, something feels fishy so eat from dog's food.</p>  
+          <p>Hello, you gorgeous visitor, you!</p>
+          
+          <p>Please see the below regarding storefront shopping limitations.</p>
+         
+          <p>Thank you!</p>
+          <p><b>Physical Location:</b> Unfortunately due to COVID-19 concerns regarding close proximity, I've chosen to ensure my customers' safety by temporarily shutting down the on-site location of my shop for now.</p>
+          <p><i>2202 Broadway St<br />San Antonio, Tx. 78215</i></p>
+          <p><b>Phone:</b> (210) 912-3955</p>
+          <p><b>E-mail:</b> <Mailto email="jessica@redcatandco.com" subject="General Inquiry" body="I'd like to ask about ...">Send me an e-mail!</Mailto></p>
+          <p><a href="https://www.google.com/maps?daddr=2202+Broadway+St,+78215" target="_blank" class="btn"><img src={require('../assets/images/Maps.jpg')}></img></a></p>
         </div>
       </Col>
     </Row>
   </Container>
-        
 )
