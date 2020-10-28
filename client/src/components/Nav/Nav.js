@@ -5,7 +5,7 @@ import { Nav, Navbar, NavDropdown } from 'react-bootstrap';
 
 export const NavigationBar = () => (
     <Navbar sticky="top" collapseOnSelect expand="lg" bg="dark" variant="dark">
-    <Navbar.Brand href="../Home">The Red Cat & Co</Navbar.Brand>
+    <Navbar.Brand href="/">The Red Cat & Co</Navbar.Brand>
     <Navbar.Toggle aria-controls="responsive-navbar-nav" />
     <Navbar.Collapse id="responsive-navbar-nav">
       <Nav className="mr-auto">

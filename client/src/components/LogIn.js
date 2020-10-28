@@ -3,6 +3,7 @@ import { Container, Row, Col } from 'react-bootstrap';
 import { useMutation } from '@apollo/react-hooks';
 import { LOGIN_USER } from '../utils/mutations';
 import Auth from '../utils/auth';
+import './LogIn.css'
 
 function LogIn() {
   const [formState, setFormState] = useState({ email: '', password: '' });
@@ -36,8 +37,11 @@ function LogIn() {
       <Row>
         <Col>
           <div>
-            <h2>Log In</h2>
-            <form onSubmit={handleFormSubmit}>
+            <img src={require('./../assets/images/RedCat.png')} width="100%" height="100%" alt="Photo of products in a bus" />
+          </div>
+          <div class="text-center">
+            <h2 class="h3 mb-3 font-weight-normal">Please Log In</h2>
+            <form onSubmit={handleFormSubmit} class="form-signin">
               <input
                 className='form-input'
                 placeholder='Your email'
