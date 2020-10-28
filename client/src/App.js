@@ -9,8 +9,7 @@ import { CreateAccount } from './components/CreateAccount';
 import { NoMatch } from './components/NoMatch';
 import { Layout } from './components/Layouts';
 import { NavigationBar } from './components/Nav/Nav.js';
-//import { Jumbotron } from './components/Jumbotron';
-/*import { Footer } from './components/Footer';*/
+import { FooterBar } from './components/Footer/Footer.js'
 import 'bootstrap/dist/css/bootstrap.min.css';
 import { ApolloProvider } from '@apollo/react-hooks';
 import ApolloClient from 'apollo-boost';
@@ -35,9 +34,11 @@ class App extends Component {
                 <Route path="/LogIn" component={LogIn} />
                 <Route path="/CreateAccount" component={CreateAccount} />
                 <Route component={NoMatch} />
+               
               </Switch>
             </Router>
           </Layout>
+          <FooterBar></FooterBar>
         </React.Fragment>
       </ApolloProvider>
     )
