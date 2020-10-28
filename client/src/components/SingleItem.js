@@ -9,6 +9,7 @@ function ProductItem(item) {
       name,
       _id,
       price,
+      description,
       quantity
     } = item;
   
@@ -47,6 +48,7 @@ function ProductItem(item) {
           <p>{name}</p>
         </Link>
         <div>
+          <div>{description}</div>
           <div>{quantity} in stock</div>
           <span>${price}</span>
         </div>
