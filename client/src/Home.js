@@ -1,8 +1,11 @@
 import React from 'react';
 import { insideBus } from './assets/cover/insideBus.jpg';
 
+import Category from "./components/Category";
+
 export const Home = () => (
   <section className="my-5">
+    <Category />
     <h1 id="about">Who am I?</h1>
     <img src={insideBus} className="my-2" style={{ width: "100%" }} alt="cover" />
     <div className="my-2">
