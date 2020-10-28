@@ -1,20 +1,79 @@
 import React from 'react';
-import { insideBus } from './assets/cover/insideBus.jpg';
+import './Home.css';
+import Carousel from 'react-bootstrap/Carousel';
+
+
+
 
 export const Home = () => (
-<section className="my-5">
-      <h1 id="about">Who am I?</h1>
-      <img src={insideBus} className="my-2" style={{ width: "100%" }} alt="cover" />
-      <div className="my-2">
-        <p>
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec bibendum turpis sed ex
-          condimentum molestie. Mauris condimentum lectus ut ornare dignissim. Mauris faucibus urna
-          mi, ac feugiat metus aliquam maximus. Proin aliquam justo nec diam vulputate vestibulum.
-          Aenean sollicitudin nulla at nisi ornare, nec suscipit massa eleifend. Morbi tristique
-          justo vel turpis sollicitudin, et tristique velit convallis. In hac habitasse platea
-          dictumst. Phasellus mattis nunc sed orci consequat laoreet. Praesent id nisl nibh.
-          Curabitur imperdiet ultricies mollis. In hac habitasse platea dictumst.
-        </p>
+  <div>
+  <div>
+  <img src={require('./assets/images/Red-Cat-Co.png')} width="100%" height="100%" alt="Photo of products in a bus" />
+  </div>
+  <div class="album py-5 bg-white">
+        <div class="container">
+
+          <div class="row">
+            <div class="col-md-4">
+              <div class="card mb-4 shadow-sm">
+              <img src={require('./assets/images/Accessories.png')} width="100%" height="100%" alt="Photo of retro flower earrings" />
+              </div>
+            </div>
+            <div class="col-md-4">
+              <div class="card mb-4 shadow-sm">
+              <img src={require('./assets/images/Apparel.png')} width="100%" height="100%" alt="Photo of white and red shirt" />
+              </div>
+            </div>
+            <div class="col-md-4">
+              <div class="card mb-4 shadow-sm">
+              <img src={require('./assets/images/Bags.png')} width="100%" height="100%" alt="Photo orange bag" />
+              </div>
+            </div>
+            <div class="col-md-4">
+              <div class="card mb-4 shadow-sm">
+              <img src={require('./assets/images/Beauty.png')} width="100%" height="100%" alt="Photo of spray bottle" />
+              </div>
+            </div>
+            <div class="col-md-4">
+              <div class="card mb-4 shadow-sm">
+              <img src={require('./assets/images/Home-Decor.png')} width="100%" height="100%" alt="Photo of retro chair and pillow" />
+              </div>
+            </div>
+            <div class="col-md-4">
+              <div class="card mb-4 shadow-sm">
+              <a href="/ShopAll"><img src={require('./assets/images/Shop-All.png')} width="100%" height="100%" alt="Photo of yellow t-shirt" /></a>
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
-    </section>
-)
+<div class="text-center bg-white">
+<h2 position-center> Follow Us On Instagram </h2>
+<Carousel>
+  <Carousel.Item>
+  <a href="https://www.instagram.com/redcatandco/"><img
+      className="d-block w-100"
+      src={require('./assets/images/instaredbus.png')}
+      alt="Parked Mini Bus"
+    /> </a>
+  </Carousel.Item>
+  <Carousel.Item>
+  <a href="https://www.instagram.com/redcatandco/"><img
+      className="d-block w-100"
+      src={require('./assets/images/instamug.png')}
+      alt="Third slide"
+    /> </a>
+  </Carousel.Item>
+  <Carousel.Item>
+  <a href="https://www.instagram.com/redcatandco/"><img
+      className="d-block w-100"
+      src={require('./assets/images/instashirt.png')}
+      alt="Third slide"
+    /></a>
+  </Carousel.Item>
+</Carousel>
+</div>
+</div>
+    
+) 
+
