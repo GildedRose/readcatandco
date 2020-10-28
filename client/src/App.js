@@ -16,6 +16,7 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import { ApolloProvider } from '@apollo/react-hooks';
 import ApolloClient from 'apollo-boost';
 import { StoreProvider } from "./utils/GlobalState";
+import Detail from "./components/Detail";
 
 const client = new ApolloClient({
   request: operation => {
@@ -47,6 +48,7 @@ class App extends Component {
                   <Route path="/LogIn" component={LogIn} />
                   <Route path="/CreateAccount" component={CreateAccount} />
                   <Route path="/profile/:email?" component={Profile} />
+                  <Route path="/products/:id" component={Detail} />
                   <Route component={NoMatch} />
                 </Switch>
               </StoreProvider>
