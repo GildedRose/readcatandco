@@ -5,6 +5,8 @@ import Carousel from 'react-bootstrap/Carousel';
 
 
 
+import Category from "./components/Category";
+
 export const Home = () => (
   <div>
   <div>

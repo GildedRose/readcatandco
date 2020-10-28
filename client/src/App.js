@@ -5,16 +5,26 @@ import { ShopAll } from './components/ShopAll';
 import { About } from './components/About';
 import { ContactUs } from './components/ContactUs';
 import LogIn from './components/LogIn'
-import { CreateAccount } from './components/CreateAccount';
+import CreateAccount from './components/CreateAccount';
+import Profile from './components/Profile';
 import { NoMatch } from './components/NoMatch';
 import { Layout } from './components/Layouts';
-import { NavigationBar } from './components/Nav/Nav.js';
-import { FooterBar } from './components/Footer/Footer.js'
+import NavigationBar from './components/Nav/Nav.js';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import { ApolloProvider } from '@apollo/react-hooks';
 import ApolloClient from 'apollo-boost';
+import { StoreProvider } from "./utils/GlobalState";
 
 const client = new ApolloClient({
+  request: operation => {
+    const token = localStorage.getItem('id_token');
+
+    operation.setContext({
+      headers: {
+        authorization: token ? `Bearer ${token}` : ''
+      }
+    });
+  },
   uri: 'http://localhost:3001/graphql'
 });
 
@@ -38,7 +48,7 @@ class App extends Component {
               </Switch>
             </Router>
           </Layout>
-          <FooterBar></FooterBar>
+          {/* <FooterBar></FooterBar> */}
         </React.Fragment>
       </ApolloProvider>
     )
