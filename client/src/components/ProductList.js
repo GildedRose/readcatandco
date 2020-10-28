@@ -18,15 +18,15 @@ function ProductList() {
                 products: data.products
             });
         }
-    }, [data, dispatch]);
+    }, [data, loading, dispatch]);
 
     function filterProducts() {
         if (!currentCategory) {
-            return state.products;
+          return state.products;
         }
-
-        return state.products.filter(product => product.category._id  === currentCategory);
-    }
+    
+        return state.products.filter(product => product.category._id === currentCategory);
+      }
 
 
     return (
