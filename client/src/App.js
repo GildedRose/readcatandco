@@ -11,10 +11,11 @@ import { NoMatch } from './components/NoMatch';
 import { Layout } from './components/Layouts';
 import NavigationBar from './components/Nav/Nav.js';
 //import { Jumbotron } from './components/Jumbotron';
-import Footer from './components/Footer';
+// import Footer from './components/Footer';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import { ApolloProvider } from '@apollo/react-hooks';
 import ApolloClient from 'apollo-boost';
+import { StoreProvider } from "./utils/GlobalState";
 
 const client = new ApolloClient({
   request: operation => {
@@ -37,16 +38,18 @@ class App extends Component {
           <NavigationBar />
           <Layout>
             <Router>
-              <Switch>
-                <Route exact path="/Home" component={Home} />
-                <Route path="/ShopAll" component={ShopAll} />
-                <Route path="/About" component={About} />
-                <Route path="/ContactUs" component={ContactUs} />
-                <Route path="/LogIn" component={LogIn} />
-                <Route path="/CreateAccount" component={CreateAccount} />
-                <Route path="/profile/:email?" component={Profile} />
-                <Route component={NoMatch} />
-              </Switch>
+              <StoreProvider>
+                <Switch>
+                  <Route exact path="/Home" component={Home} />
+                  <Route path="/ShopAll" component={ShopAll} />
+                  <Route path="/About" component={About} />
+                  <Route path="/ContactUs" component={ContactUs} />
+                  <Route path="/LogIn" component={LogIn} />
+                  <Route path="/CreateAccount" component={CreateAccount} />
+                  <Route path="/profile/:email?" component={Profile} />
+                  <Route component={NoMatch} />
+                </Switch>
+              </StoreProvider>
             </Router>
           </Layout>
         </React.Fragment>
