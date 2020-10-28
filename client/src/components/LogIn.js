@@ -41,13 +41,13 @@ const LogIn = props => {
       <Row>
         <Col>
           <div>
-            <img src={require('./../assets/images/RedCat.png')} width="100%" height="100%" alt="Photo of products in a bus" />
+            <img src={require('./../assets/images/RedCat.png')} width="100%" height="100%" alt="The Red Cat and Co in retro style" />
           </div>
           <div class="text-center">
             <h2 class="h3 mb-3 font-weight-normal">Please Log In</h2>
             <form onSubmit={handleFormSubmit} class="form-signin">
-              <input
-                className='form-input'
+              <input                                                                                                                                                        
+                className='form-input form-signin'
                 placeholder='Email Address'
                 name='email'
                 type='email'
@@ -56,7 +56,7 @@ const LogIn = props => {
                 onChange={handleChange}
               />
               <input
-                className='form-input'
+                className='form-input form-signin'
                 placeholder='Password'
                 name='password'
                 type='password'
@@ -64,7 +64,7 @@ const LogIn = props => {
                 value={formState.password}
                 onChange={handleChange}
               />
-              <button type='submit'>
+              <button class="btn btn-lg btn-danger btn-block" type='submit'>
                 Submit
             </button>
             </form>
