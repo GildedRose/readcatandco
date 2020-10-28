@@ -5,7 +5,7 @@ import { LOGIN_USER } from '../utils/mutations';
 import Auth from '../utils/auth';
 import './LogIn.css'
 
-function LogIn() {
+const LogIn = props => {
   const [formState, setFormState] = useState({ email: '', password: '' });
   const [login, { error }] = useMutation(LOGIN_USER);
 
@@ -30,6 +30,10 @@ function LogIn() {
     } catch (e) {
       console.error(e);
     }
+    setFormState({
+      email: '',
+      password: ''
+    });
   }
 
   return (
@@ -44,7 +48,7 @@ function LogIn() {
             <form onSubmit={handleFormSubmit} class="form-signin">
               <input
                 className='form-input'
-                placeholder='Your email'
+                placeholder='Email Address'
                 name='email'
                 type='email'
                 id='email'
@@ -53,7 +57,7 @@ function LogIn() {
               />
               <input
                 className='form-input'
-                placeholder='********'
+                placeholder='Password'
                 name='password'
                 type='password'
                 id='password'
