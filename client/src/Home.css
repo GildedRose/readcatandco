@@ -6,7 +6,7 @@ h1 {
 .logo{
     height: auto;
     width: 100%;
-    background-image: url("assets/images/RedCat.png");
+    background-image: url("/images/RedCat.png");
     background-size: cover;
     background-position: center;
 }
@@ -15,7 +15,7 @@ h1 {
     height: 800px;
     width: 100%;
     margin-bottom: 25px;;
-    background-image: url("assets/images/Red-Cat-Co.png");
+    background-image: url("/images/Red-Cat-Co.png");
     background-size: cover;
     background-position: center;
     
@@ -24,20 +24,20 @@ h1 {
 .accessories {
     height: 100%;
     width: 100%;
-    background-image: url("assets/images/dogpack-red00-220x.jpg");
+    background-image: url("/images/dogpack-red00-220x.jpg");
     background-size: cover;
 }
 
 .homegoods {
     height: 100%;
     width: 100%;
-    background-image: url("assets/images/disappointedmug00-360x.jpg");
+    background-image: url("/images/disappointedmug00-360x.jpg");
     background-size: cover;
 }
 
 .pins {
     height: 100%;
     width: 100%;
-    background-image: url("assets/images/girlsunite00-360x.jpg");
+    background-image: url("/images/girlsunite00-360x.jpg");
     background-size: cover;
 }

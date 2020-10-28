@@ -9,7 +9,7 @@ import CreateAccount from './components/CreateAccount';
 import Profile from './components/Profile';
 import { NoMatch } from './components/NoMatch';
 import { Layout } from './components/Layouts';
-import { NavigationBar } from './components/Nav/Nav.js';
+import NavigationBar from './components/Nav/Nav.js';
 import { FooterBar } from './components/Footer/Footer.js'
 import 'bootstrap/dist/css/bootstrap.min.css';
 import { ApolloProvider } from '@apollo/react-hooks';
