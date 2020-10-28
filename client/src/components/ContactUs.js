@@ -22,7 +22,7 @@ export const ContactUs = () => (
           <p><i>2202 Broadway St<br />San Antonio, Tx. 78215</i></p>
           <p><b>Phone:</b> (210) 912-3955</p>
           <p><b>E-mail:</b> <Mailto email="jessica@redcatandco.com" subject="General Inquiry" body="I'd like to ask about ...">Send me an e-mail!</Mailto></p>
-          <p><a href="https://www.google.com/maps?daddr=2202+Broadway+St,+78215" target="_blank" class="btn"><img src={"../../assets/cover/Maps.jpg"}></img></a></p>
+          <p><a href="https://www.google.com/maps?daddr=2202+Broadway+St,+78215" target="_blank" class="btn"><img src={require('../assets/images/Maps.jpg')}></img></a></p>
         </div>
       </Col>
     </Row>
