@@ -9,7 +9,7 @@ import CreateAccount from './components/CreateAccount';
 import Profile from './components/Profile';
 import { NoMatch } from './components/NoMatch';
 import { Layout } from './components/Layouts';
-import { NavigationBar } from './components/Nav/Nav.js';
+import NavigationBar from './components/Nav/Nav.js';
 //import { Jumbotron } from './components/Jumbotron';
 import Footer from './components/Footer';
 import 'bootstrap/dist/css/bootstrap.min.css';
@@ -17,7 +17,16 @@ import { ApolloProvider } from '@apollo/react-hooks';
 import ApolloClient from 'apollo-boost';
 
 const client = new ApolloClient({
-  uri: 'http://localhost:3001/graphql'
+  request: operation => {
+    const token = localStorage.getItem('id_token');
+
+    operation.setContext({
+      headers: {
+        authorization: token ? `Bearer ${token}` : ''
+      }
+    });
+  },
+  uri: '/graphql'
 });
 
 class App extends Component {
@@ -38,7 +47,6 @@ class App extends Component {
                 <Route path="/profile/:email?" component={Profile} />
                 <Route component={NoMatch} />
               </Switch>
-              <Footer />
             </Router>
           </Layout>
         </React.Fragment>

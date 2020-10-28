@@ -46,14 +46,14 @@ const resolvers = {
             const user = await User.findOne({ email });
 
             if (!user) {
-                throw new AuthenticationError('Unable to login: Incorrect credentials')
+                throw new AuthenticationError('Incorrect credentials');
             }
+
             const correctPw = await user.isCorrectPassword(password);
 
             if (!correctPw) {
                 throw new AuthenticationError('Incorrect credentials');
             }
-
 
             const token = signToken(user);
             return { token, user };

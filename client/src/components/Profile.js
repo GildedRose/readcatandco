@@ -4,7 +4,7 @@ import { useQuery } from '@apollo/react-hooks';
 import { QUERY_USER } from '../utils/queries';
 import Auth from '../utils/auth';
 
-const Profile = () => {
+const Profile = props => {
 
     const { email: userParam } = useParams();
 
@@ -12,7 +12,7 @@ const Profile = () => {
         variables: { email: userParam }
     });
 
-    const user = data?.user || {};
+    const user = data?.me || data?.user || {};
 
     if (loading) {
         return <div>Loading...</div>;
@@ -25,11 +25,11 @@ const Profile = () => {
             </h4>
         )
     }
-    console.log("loggedIn")
+    
     return (
         <div>
             <h2>
-                Viewing {user.firstName}'s Profile.
+                {user.firstName}'s Account
             </h2>
         </div>
     )
