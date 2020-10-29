@@ -13,7 +13,6 @@ export const ShopAll = () => (
       <Col>
       <div>
           <h2>Shop All</h2> 
-          <Cart />
           <Category />
           <ProductList />
           <p></p>  
