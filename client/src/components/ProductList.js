@@ -4,7 +4,6 @@ import { useStoreContext } from '../utils/GlobalState';
 import { UPDATE_PRODUCTS } from '../utils/actions';
 import SingleItem from './SingleItem';
 import { QUERY_PRODUCTS } from '../utils/queries';
-import { idbPromise } from "../utils/indexedDB";
 
 function ProductList() {
 
@@ -18,27 +17,16 @@ function ProductList() {
                 type: UPDATE_PRODUCTS,
                 products: data.products
             });
-
-            data.products.forEach((product) => {
-              idbPromise('products', 'put', product);
-            });
-        } else if (!loading) {
-          idbPromise('products', 'get').then((products) => {
-            dispatch({
-              type: UPDATE_PRODUCTS,
-              products: products
-            });
-          });
         }
-    }, [data, loading, dispatch]);
+    }, [data, dispatch]);
 
     function filterProducts() {
         if (!currentCategory) {
-          return state.products;
+            return state.products;
         }
-    
-        return state.products.filter(product => product.category._id === currentCategory);
-      }
+
+        return state.products.filter(product => product.category._id  === currentCategory);
+    }
 
 
     return (
@@ -48,15 +36,17 @@ function ProductList() {
             <div className="row">
               <div className="col-md-4">
                 {filterProducts().map(product => (
+                  <div className="">
                     <SingleItem
                       key= {product._id}
                       _id={product._id}
                       image={product.image}
                       name={product.name}
-                      // description={product.description}
+                      description={product.description}
                       price={product.price}
                       quantity={product.quantity}
                     />
+                    </div>
                 ))}
             </div>
             </div>
