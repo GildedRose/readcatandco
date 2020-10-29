@@ -29,10 +29,10 @@ const NavigationBar = () => {
           <Nav.Link href="/ContactUs">Contact Us</Nav.Link>
           {Auth.loggedIn() ? (
             <>
-              <Nav.Link to="/profile">My Account</Nav.Link>
-              <a href="/" onClick={logout}>
+              <Nav.Link href="/profile">My Account</Nav.Link>
+              <Nav.Link href="/" onClick={logout}>
                 Logout
-            </a>
+            </Nav.Link>
             </>
           ) : (
               <>
