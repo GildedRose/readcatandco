@@ -36,7 +36,7 @@ const Cart = () => {
         return sum.toFixed(2);
     }
 
-    if (!state.cartOpen) {
+   {/* if (!state.cartOpen) {
         return (
             <div onClick={toggleCart}>
                 <button>
@@ -44,11 +44,10 @@ const Cart = () => {
                 </button>
             </div>
         );
-    }
+    } */}
 
     return (
         <div className="cart">
-            <div className="close" onClick={toggleCart} >[close]</div>
             <h2>Shopping Cart</h2>
             {state.cart.length ? (
                 <div>
