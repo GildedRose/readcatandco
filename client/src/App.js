@@ -57,7 +57,7 @@ class App extends Component {
               </StoreProvider>
             </Router>
           </Layout>
-          {/* <FooterBar></FooterBar> */}
+          <FooterBar></FooterBar>
         </React.Fragment>
       </ApolloProvider>
     )
