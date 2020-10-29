@@ -41,16 +41,16 @@ function ProductItem(item) {
   };
 
   return (
-    <div className="card px-1 py-1">
+    <div class="card mb-4 shadow-sm" width="400px">
       <Link to={`/products/${_id}`}>
         <img
+          class="card-img-top" width="400px"
           alt={name}
           src={`/images/${image}`}
         />
-        <p>{name}</p>
+        <p class="text-center">{name}</p>
       </Link>
       <div>
-        <div>{description}</div>
         <div>{quantity} in stock</div>
         <span>${price}</span>
       </div>

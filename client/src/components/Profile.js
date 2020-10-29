@@ -21,7 +21,7 @@ const Profile = props => {
     if (!user?.email) {
         return (
             <h4>
-                You need to be logged in to seet his page. Either login or create an account.
+                You need to be logged in to see this page. Either login or create an account.
             </h4>
         )
     }
