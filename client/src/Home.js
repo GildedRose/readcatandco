@@ -2,7 +2,7 @@ import React from 'react';
 import './Home.css';
 import Carousel from 'react-bootstrap/Carousel';
 import { Link } from "react-router-dom";
-// import Category from './components/Category';
+import Category from './components/Category';
 
 export const Home = () => (
   <div>
