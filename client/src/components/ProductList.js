@@ -34,9 +34,9 @@ function ProductList() {
           <h2>Our Products:</h2>
           {state.products.length ? (
             <div className="row">
-              <div className="col-md-4">
+              <div className="col md-4">
                 {filterProducts().map(product => (
-                  <div className="">
+                  <div>
                     <SingleItem
                       key= {product._id}
                       _id={product._id}
@@ -48,8 +48,9 @@ function ProductList() {
                     />
                     </div>
                 ))}
+                </div>
             </div>
-            </div>
+            
           ) : (
             <h3>You haven't added any products yet!</h3>
           )}
