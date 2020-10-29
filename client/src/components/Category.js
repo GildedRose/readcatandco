@@ -3,6 +3,7 @@ import { useQuery } from '@apollo/react-hooks';
 import { QUERY_CATEGORIES } from "../utils/queries";
 import { useStoreContext } from "../utils/GlobalState";
 import { UPDATE_CATEGORIES, UPDATE_CURRENT_CATEGORY } from '../utils/actions';
+import { idbPromise } from '../utils/indexedDB';
 
 function Category() {
     const [state, dispatch] = useStoreContext();
@@ -15,8 +16,18 @@ function Category() {
                 type: UPDATE_CATEGORIES,
                 categories: categoryData.categories
             });
+            categoryData.categories.forEach(category => {
+                idbPromise('categories', 'put', category);
+            });
+        } else if (!loading) {
+            idbPromise('categories', 'get').then(categories => {
+                dispatch({
+                    type: UPDATE_CATEGORIES,
+                    categories: categories
+                });
+            });
         }
-    }, [categoryData, dispatch]);
+    }, [categoryData, loading, dispatch]);
 
     const handleClick = id => {
         dispatch({

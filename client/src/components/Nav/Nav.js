@@ -29,18 +29,20 @@ const NavigationBar = () => {
           <Nav.Link href="/ContactUs">Contact Us</Nav.Link>
           {Auth.loggedIn() ? (
             <>
-              <Nav.Link to="/profile">My Account</Nav.Link>
-              <a href="/" onClick={logout}>
+              <Nav.Link href="/profile">My Account</Nav.Link>
+              <Nav.Link href="/" onClick={logout}>
                 Logout
-            </a>
+            </Nav.Link>
             </>
           ) : (
               <>
                 <Nav.Link href="/LogIn">Log In</Nav.Link>
                 <Nav.Link href="/CreateAccount">Create Account</Nav.Link>
+
               </>
             )}
-          {/* <Cart /> */}
+            <Nav.Link href="/Cart">Cart</Nav.Link>
+            {/* <Cart /> */}
         </Nav>
       </Navbar.Collapse>
     </Navbar>
