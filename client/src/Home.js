@@ -13,7 +13,7 @@ export const Home = () => (
       <div class="container">
         <div class="row">
           <div class="col-md-4">
-            <Link to="/5f99d35c13c736310880a69c">
+            <Link to="/Accessories" >
               <div class="card mb-4 shadow-sm">
                 <img src={require('./assets/images/Accessories.png')} width="100%" height="100%" alt="Photo of retro flower earrings" />
               </div>

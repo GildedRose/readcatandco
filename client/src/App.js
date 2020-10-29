@@ -17,6 +17,7 @@ import ApolloClient from 'apollo-boost';
 import { StoreProvider } from "./utils/GlobalState";
 import Detail from "./components/Detail";
 import Cart from "./components/Cart";
+import Category from './components/Category';
 
 const client = new ApolloClient({
   request: operation => {
@@ -50,6 +51,7 @@ class App extends Component {
                   <Route path="/Cart" component={Cart} />
                   <Route path="/profile/:email?" component={Profile} />
                   <Route path="/products/:id" component={Detail} />
+                  <Route path="/Category" component={Category}/>
                   <Route component={NoMatch} />
                 </Switch>
               </StoreProvider>
