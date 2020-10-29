@@ -18,6 +18,7 @@ import { StoreProvider } from "./utils/GlobalState";
 import Detail from "./components/Detail";
 import Cart from "./components/Cart";
 import Category from './components/Category';
+import Success from './components/Pages/Success';
 
 const client = new ApolloClient({
   request: operation => {
@@ -51,7 +52,8 @@ class App extends Component {
                   <Route path="/Cart" component={Cart} />
                   <Route path="/profile/:email?" component={Profile} />
                   <Route path="/products/:id" component={Detail} />
-                  <Route path="/Category" component={Category}/>
+                  <Route path="/Category" component={Category} />
+                  <Route path="/success" component={Success} />
                   <Route component={NoMatch} />
                 </Switch>
               </StoreProvider>
