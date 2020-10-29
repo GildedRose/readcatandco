@@ -1,5 +1,6 @@
 const { Schema, model } = require('mongoose');
 const bcrypt = require('bcrypt');
+const Order = require('./Order');
 
 const userSchema = new Schema({
     firstName: {
@@ -22,7 +23,8 @@ const userSchema = new Schema({
         type: String,
         required: true,
         minlength: 8
-    }
+    },
+    orders: [Order.schema]
 
 });
 
