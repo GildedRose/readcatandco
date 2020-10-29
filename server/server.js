@@ -13,7 +13,9 @@ const server = new ApolloServer({
   context: authMiddleware
 
 });
-
+if (process.env.NODE_ENV === 'production') {
+  app.use(express.static(path.join(__dirname, '../client/build')));
+}
 // integrate our Apollo server with the Express application as middleware
 server.applyMiddleware({ app });
 
