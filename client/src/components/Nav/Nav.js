@@ -1,7 +1,7 @@
 import React from 'react';
 import { Nav, Navbar, NavDropdown } from 'react-bootstrap';
 import Auth from '../../utils/auth';
-import Cart from '../Cart';
+// import Cart from '../Cart';
 
 
 
