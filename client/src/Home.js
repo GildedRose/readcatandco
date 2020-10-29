@@ -2,7 +2,7 @@ import React from 'react';
 import './Home.css';
 import Carousel from 'react-bootstrap/Carousel';
 import { Link } from "react-router-dom";
-import Category from './components/Category';
+// import Category from './components/Category';
 
 export const Home = () => (
   <div>
@@ -13,7 +13,7 @@ export const Home = () => (
       <div class="container">
         <div class="row">
           <div class="col-md-4">
-            <Link to="/5f99d35c13c736310880a69c">
+            <Link to="/Accessories" >
               <div class="card mb-4 shadow-sm">
                 <img src={require('./assets/images/Accessories.png')} width="100%" height="100%" alt="Retro flower earrings" />
               </div>
