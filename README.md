@@ -14,7 +14,7 @@
 Download a copy of this repo to a directory of your choice. To install, you will need to run `npm i` or `npm install` to get all the dependencies running. Following proper installation of the dependencies, you will type `npm start` on the root directory terminal to start the server.
 
 ## Usage
-Be sure all repository files were successfully cloned to server and a connection to the database is completely.
+Be sure all repository files were successfully cloned to server and a connection to the database is complete.
 
 ## License
 ![Github license](http://img.shields.io/badge/license-MIT-blue.svg) This project is covered by the MIT license.
