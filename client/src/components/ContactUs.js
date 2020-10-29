@@ -12,17 +12,16 @@ export const ContactUs = () => (
     <Row>
       <Col>
       <div>
-          <h2>Contact Us</h2>
-          <p>Hello, you gorgeous visitor, you!</p>
+          <h2 class="text-center"><img src={require('../assets/images/ContactUs.png')} width="50%" height="50%" alt="Contact Us Header" /></h2>
+          <h5>Hello, you gorgeous visitor, you!</h5>
+                   
+          <p>Unfortunately due to COVID-19 health concerns regarding close proximity environments, I've made the decision to temporarily shut down my on-site location for the safetly of my customers.</p>
           
-          <p>Please see the below regarding storefront shopping limitations.</p>
-         
-          <p>Thank you!</p>
-          <p><b>Physical Location:</b> Unfortunately due to COVID-19 concerns regarding close proximity, I've chosen to ensure my customers' safety by temporarily shutting down the on-site location of my shop for now.</p>
-          <p><i>2202 Broadway St<br />San Antonio, Tx. 78215</i></p>
-          <p><b>Phone:</b> (210) 912-3955</p>
-          <p><b>E-mail:</b> <Mailto email="jessica@redcatandco.com" subject="General Inquiry" body="I'd like to ask about ...">Send me an e-mail!</Mailto></p>
-          <p><a href="https://www.google.com/maps?daddr=2202+Broadway+St,+78215" target="_blank" class="btn"><img src={require('../assets/images/Maps.jpg')}></img></a></p>
+          <p class="text-center"><b>Phone:</b><br />(210) 912-3955</p>
+          <p class="text-center"><a href="https://www.google.com/maps?daddr=2202+Broadway+St,+78215" target="_blank" class="btn"><img src={require('../assets/images/Maps.jpg')} class="border" width="80%" height="80%" alt="Map of Shop" /></a></p>
+          <h5 class="text-danger text-center font-weight-bold">Location:</h5>
+          <p class="text-center"><i>2202 Broadway St<br />San Antonio, TX 78215</i></p>
+          <p class="text-center"><a href="https://www.facebook.com/redcatandco/" target="_blank"><img src={require('../assets/images/facebooklogo.png')} width="9%" height="9%" alt="Facebook Logo" /></a> <a href="https://www.instagram.com/redcatandco/" target="_blank"><img src={require('../assets/images/Instagram.png')} width="9%" height="9%" alt="Instagram Logo" /></a>  <Mailto email="jessica@redcatandco.com" subject="General Inquiry" body="I'd like to ask about ..."><img src={require('../assets/images/email.png')} width="10%" height="10%" alt="Email Me" /></Mailto></p>
         </div>
       </Col>
     </Row>
