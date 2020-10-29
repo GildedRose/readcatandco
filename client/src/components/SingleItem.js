@@ -1,5 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
+//import './SingleItem.css;
 
 // import { useStoreContext } from '../../utils/GlobalState';
 
@@ -39,20 +40,25 @@ function ProductItem(item) {
     // };
   
     return (
-      <div className="card px-1 py-1">
+      <div>
+      <div class="card mb-4 shadow-sm">
         <Link to={`/products/${_id}`}>
           <img
+          class="card-img-top"
             alt={name}
             src={`/images/${image}`}
           />
-          <p>{name}</p>
+          <div class="card-body">
+          <h3 class="text-center">{name}</h3>
+          </div>
         </Link>
-        <div>
+        <div class="card body card text">
           <div>{description}</div>
           <div>{quantity} in stock</div>
           <span>${price}</span>
         </div>
         <button>Add to cart</button>
+        </div>
       </div>
     );
   }
