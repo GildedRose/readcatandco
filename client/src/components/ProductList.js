@@ -9,7 +9,8 @@ function ProductList() {
 
     const [state, dispatch] = useStoreContext();
     const { currentCategory } = state;
-    const { loading, data } = useQuery(QUERY_PRODUCTS);
+    // Removed { loading } as it wasn't being used and generated errors
+    const { data } = useQuery(QUERY_PRODUCTS);
 
     useEffect(() => {
         if (data) {
