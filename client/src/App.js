@@ -60,7 +60,7 @@ class App extends Component {
                   <Route path="/Category" component={Category} />
                   <Route path="/success" component={Success} />
                   <Route path="/Accessories" component={Accessories} />
-                  <Route path="/Apparel" compontent={Apparel} />
+                  <Route path="/Apparel" component={Apparel} />
                   <Route path="/Bags" component={Bags} />
                   <Route path="/HomeDecor" component={HomeDecor} />
                   <Route path="/Beauty" component={Beauty} />
