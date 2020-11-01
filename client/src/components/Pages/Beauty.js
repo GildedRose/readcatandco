@@ -28,7 +28,7 @@ export const Beauty = () => {
             });
             dispatch({
                 type: UPDATE_CURRENT_CATEGORY,
-                currentCategory: categoryData.categories[3]
+                currentCategory: categoryData.categories.find(x => x.name === 'Beauty')
             })
             
         } else if (!loading) {
