@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from "react";
+import { Link} from "react-router-dom";
 import { useQuery, refetch } from '@apollo/react-hooks';
 import { QUERY_CATEGORIES } from "../../utils/queries";
 import { useStoreContext } from "../../utils/GlobalState";
@@ -45,6 +46,9 @@ export const Accessories = () => {
 console.log("I LOVE CHRIS")
      return (
             <div>
+                <Link to="/">
+                        ← Back to Home
+                </Link>
                 <ProductList />
             </div>
         )
