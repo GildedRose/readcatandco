@@ -2,7 +2,7 @@ import React from 'react';
 import { useParams } from 'react-router-dom';
 import { useQuery } from '@apollo/react-hooks';
 import { QUERY_USER } from '../utils/queries';
-// import Auth from '../utils/auth';
+import Auth from '../utils/auth';
 
 const Profile = props => {
 
