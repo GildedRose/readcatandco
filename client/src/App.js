@@ -19,6 +19,11 @@ import Detail from "./components/Detail";
 import Cart from "./components/Cart";
 import Category from './components/Category';
 import Success from './components/Pages/Success';
+import { Accessories } from './components/Pages/Accessories';
+import { Apparel } from './components/Pages/Apparel';
+import { Bags } from './components/Pages/Bags';
+import { HomeDecor } from './components/Pages/HomeDecor';
+import { Beauty } from './components/Pages/Beauty';
 
 const client = new ApolloClient({
   request: operation => {
@@ -54,6 +59,11 @@ class App extends Component {
                   <Route path="/products/:id" component={Detail} />
                   <Route path="/Category" component={Category} />
                   <Route path="/success" component={Success} />
+                  <Route path="/Accessories" component={Accessories} />
+                  <Route path="/Apparel" compontent={Apparel} />
+                  <Route path="/Bags" component={Bags} />
+                  <Route path="/HomeDecor" component={HomeDecor} />
+                  <Route path="/Beauty" component={Beauty} />
                   <Route component={NoMatch} />
                 </Switch>
               </StoreProvider>
