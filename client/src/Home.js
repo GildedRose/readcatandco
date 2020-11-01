@@ -2,7 +2,7 @@ import React from 'react';
 import './Home.css';
 import Carousel from 'react-bootstrap/Carousel';
 import { Link } from "react-router-dom";
-import Category from './components/Category';
+
 
 export const Home = () => (
   <div>
@@ -15,29 +15,38 @@ export const Home = () => (
           <div class="col-md-4">
             <Link to="/Accessories" >
               <div class="card mb-4 shadow-sm">
-                <img src={require('./assets/images/Accessories.png')} width="100%" height="100%" alt="Retro flower earrings" />
+                <img src={require('./assets/images/Accessories.png')} width="100%" height="100%" alt="Retro flower earrings"
+                 />
               </div>
             </Link>
           </div>
           <div class="col-md-4">
+            <Link to="/Apparel">
             <div class="card mb-4 shadow-sm">
               <img src={require('./assets/images/Apparel.png')} width="100%" height="100%" alt="Red and white shirt" />
             </div>
+            </Link>
           </div>
           <div class="col-md-4">
+            <Link to="/Bags">
             <div class="card mb-4 shadow-sm">
               <img src={require('./assets/images/Bags.png')} width="100%" height="100%" alt="Orange bag product" />
             </div>
+            </Link>
           </div>
           <div class="col-md-4">
+            <Link to="/Beauty">
             <div class="card mb-4 shadow-sm">
               <img src={require('./assets/images/Beauty.png')} width="100%" height="100%" alt="Beauty care spray bottle" />
             </div>
+            </Link>
           </div>
           <div class="col-md-4">
+            <Link to="/HomeDecor">
             <div class="card mb-4 shadow-sm">
               <img src={require('./assets/images/Home-Decor.png')} width="100%" height="100%" alt="Retro chair and pillow combo" />
             </div>
+            </Link>
           </div>
           <div class="col-md-4">
             <Link to="/ShopAll">
