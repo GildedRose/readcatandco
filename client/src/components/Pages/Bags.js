@@ -28,7 +28,7 @@ export const Bags = () => {
             });
             dispatch({
                 type: UPDATE_CURRENT_CATEGORY,
-                currentCategory: categoryData.categories[2]
+                currentCategory: categoryData.categories.find(x => x.name === 'Bags')
             })
             
         } else if (!loading) {

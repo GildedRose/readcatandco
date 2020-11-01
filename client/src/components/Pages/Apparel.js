@@ -28,7 +28,7 @@ export const Apparel = () => {
             });
             dispatch({
                 type: UPDATE_CURRENT_CATEGORY,
-                currentCategory: categoryData.categories[0]
+                currentCategory: categoryData.categories.find(x => x.name === 'Apparel')
             })
             
         } else if (!loading) {

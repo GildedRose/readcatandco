@@ -28,7 +28,7 @@ export const HomeDecor = () => {
             });
             dispatch({
                 type: UPDATE_CURRENT_CATEGORY,
-                currentCategory: categoryData.categories[4]
+                currentCategory: categoryData.categories.find(x => x.name === 'Home Deco')
             })
             
         } else if (!loading) {
