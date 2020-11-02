@@ -1,10 +1,10 @@
 import React from 'react';
 
 export const FooterBar = () => (
-    <footer class ="footer">
+    <footer className ="footer">
         <div></div>
-        <div class="container">
-            <span class="text-muted"> © 2020 GildedRose & Team </span>
+        <div className="container">
+            <span className="text-muted"> © 2020 GildedRose & Team </span>
         </div>
     </footer>
 )
