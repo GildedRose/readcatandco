@@ -9,14 +9,14 @@ export const ShopAll = () => (
     <Row>
       <Col>
         <div>
-            <img src={require('./../assets/images/ShopAll.png')} width="100%" height="100%" alt="Shop All in retro style" />
-          </div>
-          </Col>S
-        <div>
-          <ProductList />
-          <p></p>  
+          <img src={require('./../assets/images/ShopAll.png')} width="100%" height="100%" alt="Shop All in retro style" />
         </div>
+      </Col>
+      <div>
+        <ProductList />
+        <p></p>
+      </div>
     </Row>
   </Container>
-        
+
 )
