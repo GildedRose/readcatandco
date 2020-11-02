@@ -42,7 +42,7 @@ const NavigationBar = () => {
 
               </>
             )}
-            <Nav.Link href= "Cart" >Cart</Nav.Link>
+          <Nav.Link href="Cart" >Cart</Nav.Link>
         </Nav>
       </Navbar.Collapse>
     </Navbar>

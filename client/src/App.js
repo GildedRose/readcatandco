@@ -26,7 +26,7 @@ import { HomeDecor } from './components/Pages/HomeDecor';
 import { Beauty } from './components/Pages/Beauty';
 
 const client = new ApolloClient({
-  request: operation => {
+  request: (operation) => {
     const token = localStorage.getItem('id_token');
 
     operation.setContext({
