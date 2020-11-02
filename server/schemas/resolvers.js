@@ -52,40 +52,38 @@ const resolvers = {
         },
         order: async (parent, { _id }, context) => {
             if (context.user) {
-                const user = await (await User.findById(context.user._id)).populated({
+                const user = await User.findById(context.user._id).populate({
                     path: 'orders.products',
                     populate: 'category'
                 });
 
-                return user.orders._id(_id);
+                return user.orders.id(_id);
             }
+
+            throw new AuthenticationError('Not logged in');
         },
         checkout: async (parent, args, context) => {
             const url = new URL(context.headers.referer).origin;
             const order = new Order({ products: args.products });
-            const { products } = await order.populate('products').execPopulate();
-
             const line_items = [];
 
+            const { products } = await order.populate('products').execPopulate();
+
             for (let i = 0; i < products.length; i++) {
-                // generate product id
                 const product = await stripe.products.create({
                     name: products[i].name,
                     description: products[i].description,
                     images: [`${url}/images/${products[i].image}`]
                 });
 
-                // generate price id using the product id
                 const price = await stripe.prices.create({
                     product: product.id,
                     unit_amount: products[i].price * 100,
                     currency: 'usd',
                 });
 
-                // add price id to the line items array
                 line_items.push({
-                    price: price.id,
-                    quantity: 1
+                    price: price.id
                 });
             }
 
@@ -130,13 +128,16 @@ const resolvers = {
             return product;
         },
         addOrder: async (parent, { products }, context) => {
+            console.log(context);
             if (context.user) {
                 const order = new Order({ products });
+
                 await User.findByIdAndUpdate(context.user._id, { $push: { orders: order } });
+
                 return order;
             }
 
-            throw new AuthenticationError('Not logged in!');
+            throw new AuthenticationError('Not logged in');
         }
     }
 };

@@ -9,17 +9,17 @@ function Success() {
 
     useEffect(() => {
         async function saveOrder() {
-            // const cart = await idbPromise('cart', 'get');
-            // const products = cart.map(item => item._id);
+            const cart = await idbPromise('cart', 'get');
+            const products = cart.map(item => item._id);
 
-            // if (products.length) {
-            //     const { data } = await addOrder({ variables: { products } });
-            //     const productData = data.addOrder.products;
+            if (products.length) {
+                const { data } = await addOrder({ variables: { products } });
+                const productData = data.addOrder.products;
 
-            //     productData.forEach((item) => {
-            //         idbPromise('cart', 'delete', item);
-            //     });
-            // }
+                productData.forEach((item) => {
+                    idbPromise('cart', 'delete', item);
+                });
+            }
 
             setTimeout(() => {
                 window.location.assign('/');
