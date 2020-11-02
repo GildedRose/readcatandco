@@ -26,7 +26,7 @@ import { HomeDecor } from './components/Pages/HomeDecor';
 import { Beauty } from './components/Pages/Beauty';
 
 const client = new ApolloClient({
-  request: operation => {
+  request: (operation) => {
     const token = localStorage.getItem('id_token');
 
     operation.setContext({
@@ -55,7 +55,7 @@ class App extends Component {
                   <Route path="/LogIn" component={LogIn} />
                   <Route path="/CreateAccount" component={CreateAccount} />
                   <Route path="/Cart" component={Cart} />
-                  <Route path="/profile/:email?" component={Profile} />
+                  <Route exact path="/profile/:email?" component={Profile} />
                   <Route path="/products/:id" component={Detail} />
                   <Route path="/Category" component={Category} />
                   <Route path="/success" component={Success} />

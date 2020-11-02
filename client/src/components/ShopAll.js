@@ -1,8 +1,8 @@
 import React from 'react';
 import { Container, Row, Col } from 'react-bootstrap';
 import ProductList from './ProductList';
-import Category from './Category';
-import Cart from './Cart';
+// import Category from './Category';
+// import Cart from './Cart';
 
 export const ShopAll = () => (
   <Container>

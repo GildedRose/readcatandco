@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { useQuery, refetch } from '@apollo/react-hooks';
+import { Link} from "react-router-dom";
 import { QUERY_CATEGORIES } from "../../utils/queries";
 import { useStoreContext } from "../../utils/GlobalState";
 import { UPDATE_CATEGORIES, UPDATE_CURRENT_CATEGORY } from '../../utils/actions';
@@ -45,8 +46,14 @@ export const HomeDecor = () => {
 console.log("I LOVE CHRIS")
      return (
             <div>
+
                 <div>
                 <img src={require('../../assets/images/HomeDecor.png')} width="100%" height="100%" alt="Home Decor in retro style" />
+
+                <Link to="/">
+                        ← Back to Home
+                </Link>
+
                 <ProductList />
                 </div>
             </div>

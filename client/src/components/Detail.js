@@ -80,7 +80,7 @@ function Detail() {
                 <div className="container my-1">
                     <Link to="/ShopAll">
                         ← Back to Products
-              </Link>
+                    </Link>
 
                     <h2>{currentProduct.name}</h2>
 
