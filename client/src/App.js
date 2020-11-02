@@ -24,7 +24,6 @@ import { Apparel } from './components/Pages/Apparel';
 import { Bags } from './components/Pages/Bags';
 import { HomeDecor } from './components/Pages/HomeDecor';
 import { Beauty } from './components/Pages/Beauty';
-import OrderHistory from './components/Pages/OrderHistory';
 
 const client = new ApolloClient({
   request: operation => {
@@ -57,7 +56,6 @@ class App extends Component {
                   <Route path="/CreateAccount" component={CreateAccount} />
                   <Route path="/Cart" component={Cart} />
                   <Route exact path="/profile/:email?" component={Profile} />
-                  <Route path="/orderHistory" component={OrderHistory} />
                   <Route path="/products/:id" component={Detail} />
                   <Route path="/Category" component={Category} />
                   <Route path="/success" component={Success} />
