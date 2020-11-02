@@ -38,15 +38,21 @@ Text
 At this time, we are not seeking contributions to this application for `Red Cat & Co`.
 
 ## Resources
-[![](demoshots/nodejs.png)](https://nodejs.org/en/) [![](demoshots/express.png)](https://www.npmjs.com/package/express ) [![](demoshots/bootstrap.png)](https://www.npmjs.com/package/bootstrap) 
+[![](demoshots/nodejs.png)](https://nodejs.org/en/) [![](demoshots/express.png)](https://www.npmjs.com/package/express)
 
-[![](demoshots/apollo.png)](https://www.npmjs.com/package/apollo-server-express) [![](demoshots/mongodb.png)](http://wwww.mongodb.com/) [![](demoshots/graphql.png)](https://www.npmjs.com/package/graphql)
+[![](demoshots/bootstrap.png)](https://www.npmjs.com/package/bootstrap) [![](demoshots/apollo.png)](https://www.npmjs.com/package/apollo-server-express)
 
-[![](demoshots/styledcomponents.png)](https://www.npmjs.com/package/styled-components) [![](demoshots/react.png)](https://www.npmjs.com/package/react) [![](demoshots/reactscripts.png)](https://www.npmjs.com/package/react-scripts) 
+[![](demoshots/mongodb.png)](http://wwww.mongodb.com/) [![](demoshots/graphql.png)](https://www.npmjs.com/package/graphql)
 
-[![](demoshots/reactboot.png)](https://www.npmjs.com/package/react-bootstrap) [![](demoshots/reactrouter.png)](https://www.npmjs.com/package/react-router-dom) [![](demoshots/stripe.png)](https://www.npmjs.com/package/stripe) 
+[![](demoshots/styledcomponents.png)](https://www.npmjs.com/package/styled-components) [![](demoshots/react.png)](https://www.npmjs.com/package/react)
 
-[![](demoshots/heroku.png)](https://www.heroku.com) [![](demoshots/jsonwebtok.png)](https://www.npmjs.com/package/jsonwebtoken) [![](demoshots/mongoose.png)](https://www.npmjs.com/package/mongoose)
+[![](demoshots/reactscripts.png)](https://www.npmjs.com/package/react-scripts) [![](demoshots/reactboot.png)](https://www.npmjs.com/package/react-bootstrap)
+
+[![](demoshots/reactrouter.png)](https://www.npmjs.com/package/react-router-dom) [![](demoshots/stripe.png)](https://www.npmjs.com/package/stripe)
+
+[![](demoshots/heroku.png)](https://www.heroku.com) [![](demoshots/jsonwebtok.png)](https://www.npmjs.com/package/jsonwebtoken)
+
+[![](demoshots/mongoose.png)](https://www.npmjs.com/package/mongoose)
 
 ## Questions
 Please contact [Red Cat & Co](https://redcatandco.com/) for immediate questions regarding site content and vendor relations.
