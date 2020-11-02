@@ -1,6 +1,10 @@
 # Red Cat and Co
 
 # Description
+COVID-19 brought swift change to the world. Small business owners felt the intense pressure to adapt. Unable to maintain a storefront appearance due to physical spacing limitations and safety concerns, Red Cat & Co transitioned to a virtual shopping experience with a ’70s vibe to present local small business merchandise in one convenient location all at the click of a button.
+
+This is an interactive MERN stack single page application (SPA) fulfilling client needs for a revamped, versatile website.
+
 ![Github license](http://img.shields.io/badge/license-MIT-blue.svg)
 
 ## Table of Contents
@@ -8,86 +12,49 @@
   * [Usage](#usage)
   * [License](#license)
   * [Contributing](#contributing)
+  * [Resources](#resources)
   * [Questions](#questions)
-  * [React](#react)
 
 ## Installation
 Download a copy of this repo to a directory of your choice. To install, you will need to run `npm i` or `npm install` to get all the dependencies running. Following proper installation of the dependencies, you will type `npm start` on the root directory terminal to start the server.
 
 ## Usage
+Be sure all repository files were successfully cloned to server and a connection to the database is complete.
+
+Customers will have the ability to create an account through a signup form found on the `Navigation Bar` whereupon users can add items to their cart if so desired. Utilization of the `Navigation Bar` or homepage buttons will help customers select shopping items for purchase. Once items are stored in the cart, customers will be able to checkout via Stripe before being redirected back to the `Red Cat & Co` website. 
+
+![RedCat&Co Demo Shot 1](directory/path)
+
+Text
+
+![RedCat&Co Demo Shot 2](directory/path)
+
+Text
 
 ## License
 ![Github license](http://img.shields.io/badge/license-MIT-blue.svg) This project is covered by the MIT license.
 
 ## Contributing
-At this time, we are not seeking contributions to this application for `Red Cat and Co`.
+At this time, we are not seeking contributions to this application for `Red Cat & Co`.
+
+## Resources
+[![](demoshots/nodejs.png)](https://nodejs.org/en/) [![](demoshots/express.png)](https://www.npmjs.com/package/express ) [![](demoshots/bootstrap.png)](https://www.npmjs.com/package/bootstrap) 
+
+[![](demoshots/apollo.png)](https://www.npmjs.com/package/apollo-server-express) [![](demoshots/mongodb.png)](http://wwww.mongodb.com/) [![](demoshots/graphql.png)](https://www.npmjs.com/package/graphql)
+
+[![](demoshots/styledcomponents.png)](https://www.npmjs.com/package/styled-components) [![](demoshots/react.png)](https://www.npmjs.com/package/react) [![](demoshots/reactscripts.png)](https://www.npmjs.com/package/react-scripts) 
+
+[![](demoshots/reactboot.png)](https://www.npmjs.com/package/react-bootstrap) [![](demoshots/reactrouter.png)](https://www.npmjs.com/package/react-router-dom) [![](demoshots/stripe.png)](https://www.npmjs.com/package/stripe) 
+
+[![](demoshots/heroku.png)](https://www.heroku.com) [![](demoshots/jsonwebtok.png)](https://www.npmjs.com/package/jsonwebtoken) [![](demoshots/mongoose.png)](https://www.npmjs.com/package/mongoose)
 
 ## Questions
-Please contact [Red Cat and Co](https://redcatandco.com/) for immediate questions regarding site content.
-The technical questions and concerns, the available developers for the site are 
+Please contact [Red Cat & Co](https://redcatandco.com/) for immediate questions regarding site content and vendor relations.
+
+[![](demoshots/rc-c.png)](https://redcatandco.com/)
+
+The technical questions and concerns, the available developers are 
 [GildedRose](https://github.com/GildedRose),
 [ericy98](https://github.com/ericy98),
 [Devmadia](https://github.com/Devmadia),
 [Dblply21](https://github.com/Dblply21).
-
-## React 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
-
-## Available Scripts
-
-In the project directory, you can run:
-
-### `npm start`
-
-Runs the app in the development mode.<br />
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
-
-The page will reload if you make edits.<br />
-You will also see any lint errors in the console.
-
-### `npm test`
-
-Launches the test runner in the interactive watch mode.<br />
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
-
-### `npm run build`
-
-Builds the app for production to the `build` folder.<br />
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.<br />
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
-
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/code-splitting
-
-### Analyzing the Bundle Size
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size
-
-### Making a Progressive Web App
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app
-
-### Advanced Configuration
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/advanced-configuration

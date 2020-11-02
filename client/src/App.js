@@ -10,10 +10,15 @@ import Profile from './components/Profile';
 import { NoMatch } from './components/NoMatch';
 import { Layout } from './components/Layouts';
 import NavigationBar from './components/Nav/Nav.js';
+import { FooterBar } from './components/Footer/Footer.js'
 import 'bootstrap/dist/css/bootstrap.min.css';
 import { ApolloProvider } from '@apollo/react-hooks';
 import ApolloClient from 'apollo-boost';
 import { StoreProvider } from "./utils/GlobalState";
+import Detail from "./components/Detail";
+import Cart from "./components/Cart";
+import Category from './components/Category';
+import Success from './components/Pages/Success';
 
 const client = new ApolloClient({
   request: operation => {
@@ -36,19 +41,25 @@ class App extends Component {
           <NavigationBar />
           <Layout>
             <Router>
-              <Switch>
-                <Route exact path="/Home" component={Home} />
-                <Route path="/ShopAll" component={ShopAll} />
-                <Route path="/About" component={About} />
-                <Route path="/ContactUs" component={ContactUs} />
-                <Route path="/LogIn" component={LogIn} />
-                <Route path="/CreateAccount" component={CreateAccount} />
-                <Route component={NoMatch} />
-               
-              </Switch>
+              <StoreProvider>
+                <Switch>
+                  <Route exact path="/" component={Home} />
+                  <Route path="/ShopAll" component={ShopAll} />
+                  <Route path="/About" component={About} />
+                  <Route path="/ContactUs" component={ContactUs} />
+                  <Route path="/LogIn" component={LogIn} />
+                  <Route path="/CreateAccount" component={CreateAccount} />
+                  <Route path="/Cart" component={Cart} />
+                  <Route path="/profile/:email?" component={Profile} />
+                  <Route path="/products/:id" component={Detail} />
+                  <Route path="/Category" component={Category} />
+                  <Route path="/success" component={Success} />
+                  <Route component={NoMatch} />
+                </Switch>
+              </StoreProvider>
             </Router>
           </Layout>
-          {/* <FooterBar></FooterBar> */}
+          <FooterBar></FooterBar>
         </React.Fragment>
       </ApolloProvider>
     )

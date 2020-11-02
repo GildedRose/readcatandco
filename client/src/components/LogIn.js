@@ -3,6 +3,7 @@ import { Container, Row, Col } from 'react-bootstrap';
 import { useMutation } from '@apollo/react-hooks';
 import { LOGIN_USER } from '../utils/mutations';
 import Auth from '../utils/auth';
+import './LogIn.css'
 
 const LogIn = props => {
   const [formState, setFormState] = useState({ email: '', password: '' });
@@ -40,10 +41,13 @@ const LogIn = props => {
       <Row>
         <Col>
           <div>
-            <h2>Log In</h2>
-            <form onSubmit={handleFormSubmit}>
-              <input
-                className='form-input'
+            <img src={require('./../assets/images/RedCat.png')} width="100%" height="100%" alt="The Red Cat and Co in retro style" />
+          </div>
+          <div class="text-center">
+            <h2 class="h3 mb-3 font-weight-normal">Please Log In</h2>
+            <form onSubmit={handleFormSubmit} class="form-signin">
+              <input                                                                                                                                                        
+                className='form-input form-signin'
                 placeholder='Email Address'
                 name='email'
                 type='email'
@@ -52,7 +56,7 @@ const LogIn = props => {
                 onChange={handleChange}
               />
               <input
-                className='form-input'
+                className='form-input form-signin'
                 placeholder='Password'
                 name='password'
                 type='password'
@@ -60,7 +64,7 @@ const LogIn = props => {
                 value={formState.password}
                 onChange={handleChange}
               />
-              <button type='submit'>
+              <button class="btn btn-lg btn-danger btn-block" type='submit'>
                 Submit
             </button>
             </form>

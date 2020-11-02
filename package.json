@@ -16,6 +16,7 @@
   "dependencies": {
     "if-env": "^1.0.4",
     "react-iframe": "^1.8.0",
+    "react-stripe-checkout": "^2.6.3",
     "validator": "^13.1.17"
   },
   "devDependencies": {

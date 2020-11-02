@@ -3,10 +3,21 @@ import gql from 'graphql-tag';
 export const QUERY_USER = gql `
     query user($email: String!) {
         user(email: $email) {
-            _id
             firstName
             lastName
             email
+            orders {
+              _id
+              purchaseDate
+              products {
+                _id
+                name
+                description
+                price
+                quantity
+                image
+              }
+            }
         }
     }
 `;
@@ -33,4 +44,12 @@ export const QUERY_CATEGORIES = gql`
     name
   }
 }
+`;
+
+export const QUERY_CHECKOUT = gql`
+  query getCheckout($products: [ID]!) {
+    checkout(products: $products) {
+      session
+    }
+  }
 `;
