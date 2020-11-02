@@ -64,15 +64,7 @@ const Cart = () => {
         });
     }
 
-    if (!state.cartOpen) {
-        return (
-            <div onClick={toggleCart}>
-                <button>
-                    Your Cart
-                </button>
-            </div>
-        );
-    }
+
 
     return (
         <div className="cart">
