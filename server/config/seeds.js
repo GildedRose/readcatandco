@@ -115,7 +115,7 @@ db.once('open', async () => {
                 `When your skin is hot and bothered, but you're just trying to chill. Instantly soothe sunburned, stressed-out skin with cooling, moisturizing ingredients like natural spearmint, aloe, and cucumber.  We love the instant cooling effect from spearmint, eucalyptus, and cucumber, with healing relief from aloe and prickly pear. Sunday Spray is like a glass of ice water when you need it most. 
 
                 Use it when
-                The day after the beach day, post-spin class, any time you need an uplifting, refreshing moment.
+                The day after the beach day, post-spin className, any time you need an uplifting, refreshing moment.
                 
                 Directions
                 Mist liberally over face and body for instant cooling relief and hydration. Chill before use for an especially refreshing moment. Do not apply to broken skin. Re-apply as often as you'd like.               
