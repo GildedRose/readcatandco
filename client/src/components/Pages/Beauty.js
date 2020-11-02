@@ -46,7 +46,7 @@ console.log("I LOVE CHRIS")
      return (
             <div>
                 <div>
-                <img src={require('../../assets/images/Beauty(2).png')} width="100%" height="100%" alt="Beauty in retro style" />
+                <img src={require('../../assets/images/BeautyW.png')} width="100%" height="100%" alt="Beauty in retro style" />
             
                 <ProductList />
                 </div>
