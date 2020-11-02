@@ -1,7 +1,8 @@
 import React from 'react';
-import { Nav, Navbar, NavDropdown } from 'react-bootstrap';
+// Removed { NavDropdown } as it was not being used and generated errors
+import { Nav, Navbar } from 'react-bootstrap';
 import Auth from '../../utils/auth';
-import Cart from '../Cart';
+// import Cart from '../Cart';
 
 
 

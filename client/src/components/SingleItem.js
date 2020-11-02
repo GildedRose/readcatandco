@@ -10,7 +10,7 @@ function ProductItem(item) {
     name,
     _id,
     price,
-    description,
+    // description,
     quantity
   } = item;
 

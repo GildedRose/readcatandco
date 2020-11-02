@@ -23,6 +23,8 @@ Be sure all repository files were successfully cloned to server and a connection
 
 Customers will have the ability to create an account through a signup form found on the `Navigation Bar` whereupon users can add items to their cart if so desired. Utilization of the `Navigation Bar` or homepage buttons will help customers select shopping items for purchase. Once items are stored in the cart, customers will be able to checkout via Stripe before being redirected back to the `Red Cat & Co` website. 
 
+Interactive MERN Stack SPA Live Demo: https://mysterious-island-01047.herokuapp.com/
+
 ![RedCat&Co Demo Shot 1](directory/path)
 
 Text
@@ -38,21 +40,21 @@ Text
 At this time, we are not seeking contributions to this application for `Red Cat & Co`.
 
 ## Resources
-1. [Node.js](https://nodejs.org/en/)
-2. [Express](https://www.npmjs.com/package/express)
-3. [Bootstrap](https://www.npmjs.com/package/bootstrap)
-4. [Apollo Server](https://www.npmjs.com/package/apollo-server-express)
-5. [JSON Web Token](https://www.npmjs.com/package/jsonwebtoken)
-6. [GraphQL](https://www.npmjs.com/package/graphql)
-7. [Mongoose](https://www.npmjs.com/package/mongoose)
-8. [MongoDB Atlas](http://wwww.mongodb.com/)
-9. [Styled Components](https://www.npmjs.com/package/styled-components)
-10. [React](https://www.npmjs.com/package/react)
-11. [React Scripts](https://www.npmjs.com/package/react-scripts)
-12. [React Bootstrap](https://www.npmjs.com/package/react-bootstrap)
-13. [React Router Dom](https://www.npmjs.com/package/react-router-dom)
-14. [Stripe](https://www.npmjs.com/package/stripe)
-15. [Heroku](https://www.heroku.com)
+[![](demoshots/nodejs.png)](https://nodejs.org/en/) [![](demoshots/express.png)](https://www.npmjs.com/package/express)
+
+[![](demoshots/bootstrap.png)](https://www.npmjs.com/package/bootstrap) [![](demoshots/apollo.png)](https://www.npmjs.com/package/apollo-server-express)
+
+[![](demoshots/mongodb.png)](http://wwww.mongodb.com/) [![](demoshots/graphql.png)](https://www.npmjs.com/package/graphql)
+
+[![](demoshots/styledcomponents.png)](https://www.npmjs.com/package/styled-components) [![](demoshots/react.png)](https://www.npmjs.com/package/react)
+
+[![](demoshots/reactscripts.png)](https://www.npmjs.com/package/react-scripts) [![](demoshots/reactboot.png)](https://www.npmjs.com/package/react-bootstrap)
+
+[![](demoshots/reactrouter.png)](https://www.npmjs.com/package/react-router-dom) [![](demoshots/stripe.png)](https://www.npmjs.com/package/stripe)
+
+[![](demoshots/heroku.png)](https://www.heroku.com) [![](demoshots/jsonwebtok.png)](https://www.npmjs.com/package/jsonwebtoken)
+
+[![](demoshots/mongoose.png)](https://www.npmjs.com/package/mongoose)
 
 ## Questions
 Please contact [Red Cat & Co](https://redcatandco.com/) for immediate questions regarding site content and vendor relations.
