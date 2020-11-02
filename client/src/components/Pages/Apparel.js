@@ -45,7 +45,10 @@ export const Apparel = () => {
 console.log("I LOVE CHRIS")
      return (
             <div>
+                <img src={require('../../assets/images/Apparel(2).png')} width="100%" height="100%" alt="Apparel in retro style" />
+                <div>
                 <ProductList />
+            </div>
             </div>
         )
 }

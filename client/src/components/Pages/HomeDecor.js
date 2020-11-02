@@ -45,7 +45,10 @@ export const HomeDecor = () => {
 console.log("I LOVE CHRIS")
      return (
             <div>
+                <div>
+                <img src={require('../../assets/images/HomeDecor.png')} width="100%" height="100%" alt="Home Decor in retro style" />
                 <ProductList />
+                </div>
             </div>
         )
 }
