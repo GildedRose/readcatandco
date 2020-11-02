@@ -22,17 +22,18 @@ function ProductList() {
     }, [data, dispatch]);
 
     function filterProducts() {
+      console.log(currentCategory)
         if (!currentCategory) {
             return state.products;
         }
 
-        return state.products.filter(product => product.category._id  === currentCategory);
+       return state.products.filter(product => product.category._id  === currentCategory._id);
+       //return state.products.filter(product => product.category._id  === currentCategory);
     }
 
 
     return (
         <div className="my-2">
-          <h2>Our Products:</h2>
           {state.products.length ? (
             <div className="row">
               <div className="col md-4">

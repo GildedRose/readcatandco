@@ -12,8 +12,7 @@ export const ShopAll = () => (
     <Row>
       <Col>
       <div>
-          <h2>Shop All</h2> 
-          <Category />
+          <h2>Shop All</h2>
           <ProductList />
           <p></p>  
 
