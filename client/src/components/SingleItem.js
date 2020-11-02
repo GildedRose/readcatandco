@@ -44,7 +44,7 @@ function ProductItem(item) {
     <div class="card mb-4 shadow-sm" width="400px">
       <Link to={`/products/${_id}`}>
         <img
-          class="card-img-top" width="400px"
+          class="card-img-top" display="block" width="400px" height="100%"
           alt={name}
           src={`/images/${image}`}
         />
