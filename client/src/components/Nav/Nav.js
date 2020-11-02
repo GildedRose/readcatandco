@@ -39,7 +39,7 @@ const NavigationBar = () => {
           ) : (
               <>
                 <Nav.Link href="/LogIn">Log In</Nav.Link>
-                <Nav.Link href="/CreateAccount">Create Account</Nav.Link>
+                <Nav.Link href="/CreateAccount">Create an Account</Nav.Link>
 
               </>
             )}

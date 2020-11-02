@@ -27,11 +27,23 @@ Interactive MERN Stack SPA Live Demo: https://mysterious-island-01047.herokuapp.
 
 ![RedCat&Co Demo Shot 1](directory/path)
 
-Text
+Upon first glance at the redesigned `Red Cat & Co` website, customers are able to clearly see it's a virtual store for various items. Through ease of responsive taps or clicks, shoppers can peruse the website with the navigation bar or available categories badges listed on the body of the page. Settling on a '70s theme, the design of the website promotes a sense of what the owner achieved with the bus storefront.
 
 ![RedCat&Co Demo Shot 2](directory/path)
 
-Text
+When an item is viewed, shoppers have the ability to add it to their cart.
+
+![RedCat&Co Demo Shot 3](directory/path)
+
+Customers have added incentive to `Create an Account` for checkout purposes with the bonus of retaining their order history and cart information.
+
+![RedCat&Co Demo Shot 4](directory/path)
+
+Once a customer is ready to complete their retail experience, they can select `Cart` to make final decisions on which items to purchase from their shopping cart. Any unwanted items can be removed from the cart at this time. Customers may also resume their shopping experience at any time should they chose so.
+
+![RedCat&Co Demo Shot 5](directory/path)
+
+Customers will be able to review items as they checkout with Stripe before entering their payment information. Stripe will handle the transaction and email their receipt. However, items purchased also remain viewable in the customer's profile. Once payment processing concludes, shoppers are redirected to the `Red Cat & Co` website.
 
 ## License
 ![Github license](http://img.shields.io/badge/license-MIT-blue.svg) This project is covered by the MIT license.
@@ -59,7 +71,7 @@ At this time, we are not seeking contributions to this application for `Red Cat 
 ## Questions
 Please contact [Red Cat & Co](https://redcatandco.com/) for immediate questions regarding site content and vendor relations.
 
-[![](demoshots/rc-c.png)](https://redcatandco.com/)
+[![Red Cat and Co Banner](demoshots/rc-c.png)](https://redcatandco.com/)
 
 The technical questions and concerns, the available developers are 
 [GildedRose](https://github.com/GildedRose),
