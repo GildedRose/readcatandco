@@ -7,10 +7,14 @@ const resolvers = {
     Query: {
         me: async (parent, args, context) => {
             if (context.user) {
-                const userData = await User.findOne({ _id: context.user._id })
-                    .select('-__v -password');
+                const user = await User.findById(context.user._id).populate({
+                    path: 'orders.products',
+                    populate: 'category'
+                });
 
-                return userData;
+                user.orders.sort((a, b) => b.purchaseDate - a.purchaseDate);
+
+                return user;
             }
 
             throw new AuthenticationError('Not logged in');
@@ -26,23 +30,26 @@ const resolvers = {
 
                 return user;
             }
+
             throw new AuthenticationError('Not logged in');
         },
         users: async () => {
             return User.find().select('-__v -password')
         },
         product: async (parent, { _id }) => {
-            return await Product.findById(_id)
+            return await Product.findById(_id).populate('category');
         },
-        products: async (parent, { name, category }) => {
+        products: async (parent, { category, name }) => {
             const params = {};
+
+            if (category) {
+                params.category = category;
+            }
+
             if (name) {
                 params.name = {
                     $regex: name
                 };
-            }
-            if (category) {
-                params.category = category;
             }
 
             return await Product.find(params).populate('category');
