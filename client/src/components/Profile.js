@@ -5,7 +5,12 @@ import { QUERY_USER, QUERY_ME } from '../utils/queries';
 import Auth from '../utils/auth';
 
 const Profile = props => {
-
+    const options = {
+        weekday: "long",
+        year: "numeric",
+        month: "long",
+        day: "numeric"
+    };
     const { email: userParam } = useParams();
 
     const { loading, data } = useQuery(userParam ? QUERY_USER : QUERY_ME, {
@@ -38,10 +43,10 @@ const Profile = props => {
             </h2>
             {user ? (
                 <>
-                    <h2>Order History</h2>
+                    <h3 className="text-center">Order History</h3>
                     {user.orders.map((order) => (
                         <div key={order._id} className="my-2">
-                            <h3>{new Date(parseInt(order.purchaseDate)).toLocaleDateString()}</h3>
+                            <h4><i className="fa fa-cart-arrow-down" aria-hidden="true"></i> {new Date(parseInt(order.purchaseDate)).toLocaleDateString("en-US", options)}</h4>
                             <div className="flex-row">
                                 {order.products.map(({ _id, name, image, price }, index) => (
                                     <div key={index} className="card px-1 py-1">
