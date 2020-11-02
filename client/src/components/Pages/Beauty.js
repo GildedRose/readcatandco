@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { useQuery, refetch } from '@apollo/react-hooks';
-import { Link} from "react-router-dom";
+import { Link } from "react-router-dom";
 import { QUERY_CATEGORIES } from "../../utils/queries";
 import { useStoreContext } from "../../utils/GlobalState";
 import { UPDATE_CATEGORIES, UPDATE_CURRENT_CATEGORY } from '../../utils/actions';

@@ -3,10 +3,14 @@ import { Link, Redirect, useParams } from 'react-router-dom';
 import { useQuery } from '@apollo/react-hooks';
 import { QUERY_USER, QUERY_ME } from '../utils/queries';
 import Auth from '../utils/auth';
-import { useStoreContext } from '../utils/GlobalState';
 
 const Profile = props => {
-    const [state, dispatch] = useStoreContext();
+    const options = {
+        weekday: "long",
+        year: "numeric",
+        month:"long",
+        day:"numeric"
+    };
     const { email: userParam } = useParams();
 
     const { loading, data } = useQuery(userParam ? QUERY_USER : QUERY_ME, {
@@ -34,17 +38,15 @@ const Profile = props => {
 
     return (
         <div>
-            <h2>
-                {user.firstName}'s Account
-            </h2>
+            <h1 class="text-center">{user.firstName}'s Account</h1>
             <div className="container my-1">
 
                 {user ? (
                     <>
-                        <h2>Order History</h2>
+                        <h3 class="text-center">Order History</h3>
                         {user.orders.map((order) => (
                             <div key={order._id} className="my-2">
-                                <h3>{new Date(parseInt(order.purchaseDate)).toLocaleDateString()}</h3>
+                               <h4><i class="fa fa-cart-arrow-down" aria-hidden="true"></i> {new Date(parseInt(order.purchaseDate)).toLocaleDateString("en-US", options)}</h4>
                                 {/* <Link to="/profile">
                                     ← Back to Profile
                                 </Link> */}

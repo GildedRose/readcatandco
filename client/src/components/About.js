@@ -14,7 +14,6 @@ export const About = () => (
       <div class="container">
         <div class="row">
           <div class="col-md-6">
-            
               <div class="card mb-6">
                 <h5 class="text-center">About the Owner</h5>
                   <p>After relocating from New York to South Texas, Jessica found herself nostalgic for home. While San Antonio harbored trendy little shops, it lacked the same abundance of locally made merchantiles New York City offered.</p>             
@@ -24,7 +23,7 @@ export const About = () => (
                   <p>Intent on sharing her love of independent artists' merchandise with her newfound home, she branched out and found like-minded quirky business owners in the area. With a love of fun and unique items, Red Cat & Co became a central location for items unavailable elsewhere.</p>
 
                   <p>With a distinctive little bus as the storefront location, she maintained mobility and an ambiance unlike others in the area. Though she may not have set out to become a trendsetter, she found a special way of captivating her customers with the eclectic wares she procured for sale.</p>
-                </div>
+              </div>
           </div>  
           
           <div class="col-md-6">

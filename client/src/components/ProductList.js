@@ -1,4 +1,5 @@
 import React, { useEffect } from 'react';
+import { Container, Row, Col } from 'react-bootstrap';
 import { useQuery } from '@apollo/react-hooks';
 import { useStoreContext } from '../utils/GlobalState';
 import { UPDATE_PRODUCTS } from '../utils/actions';
@@ -9,7 +10,6 @@ function ProductList() {
 
     const [state, dispatch] = useStoreContext();
     const { currentCategory } = state;
-    // Removed { loading } as it wasn't being used and generated errors
     const { data } = useQuery(QUERY_PRODUCTS);
 
     useEffect(() => {
@@ -35,12 +35,11 @@ function ProductList() {
     return (
         <div className="my-2">
           {state.products.length ? (
-            <div className="row">
-              <div className="col md-4">
+            <div>
                 {filterProducts().map(product => (
                   <div>
                     <SingleItem
-                      key= {product._id}
+                      key={product._id}
                       _id={product._id}
                       image={product.image}
                       name={product.name}
@@ -50,9 +49,8 @@ function ProductList() {
                     />
                     </div>
                 ))}
-                </div>
+                
             </div>
-            
           ) : (
             <h3>You haven't added any products yet!</h3>
           )}

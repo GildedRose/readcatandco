@@ -1,6 +1,5 @@
 import React from 'react';
-// Removed { NavDropdown } as it was not being used and generated errors
-import { Nav, Navbar } from 'react-bootstrap';
+import { Nav, Navbar, NavDropdown } from 'react-bootstrap';
 import Auth from '../../utils/auth';
 // import Cart from '../Cart';
 
@@ -19,14 +18,15 @@ const NavigationBar = () => {
       <Navbar.Toggle aria-controls="responsive-navbar-nav" />
       <Navbar.Collapse id="responsive-navbar-nav">
         <Nav className="mr-auto">
-          {/* <NavDropdown title="Shop" id="collasible-nav-dropdown">
-            <NavDropdown.Item href="#action/3.1">Action</NavDropdown.Item>
-            <NavDropdown.Item href="#action/3.2">Another action</NavDropdown.Item>
-            <NavDropdown.Item href="#action/3.3">Something</NavDropdown.Item>
+          <NavDropdown title="Shop" id="collasible-nav-dropdown">
+            <NavDropdown.Item href="/Accessories">Accessories</NavDropdown.Item>
+            <NavDropdown.Item href="/Apparel">Apparel</NavDropdown.Item>
+            <NavDropdown.Item href="/Bags">Bags</NavDropdown.Item>
+            <NavDropdown.Item href="/Beauty">Beauty</NavDropdown.Item>
+            <NavDropdown.Item href="/HomeDecor">Home Decor</NavDropdown.Item>
             <NavDropdown.Divider />
             <NavDropdown.Item href="/ShopAll">Shop All</NavDropdown.Item>
-            </NavDropdown> */}
-          <Nav.Link href="/ShopAll">Shop</Nav.Link>
+            </NavDropdown>
           <Nav.Link href="/About">About</Nav.Link>
           <Nav.Link href="/ContactUs">Contact Us</Nav.Link>
           {Auth.loggedIn() ? (
@@ -43,7 +43,7 @@ const NavigationBar = () => {
 
               </>
             )}
-            <Nav.Link href= "Cart" >Cart</Nav.Link>
+            <Nav.Link href= "Cart">Cart</Nav.Link>
         </Nav>
       </Navbar.Collapse>
     </Navbar>
