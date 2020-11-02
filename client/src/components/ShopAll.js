@@ -11,7 +11,7 @@ export const ShopAll = () => (
         <div>
             <img src={require('./../assets/images/ShopAll.png')} width="100%" height="100%" alt="Shop All in retro style" />
           </div>
-          </Col>S
+          </Col>
         <div>
           <ProductList />
           <p></p>  
