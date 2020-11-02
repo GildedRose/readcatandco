@@ -15,10 +15,10 @@ const CartItem = ({ item }) => {
         idbPromise('cart', 'delete', { ...item });
     };
 
-    const onChange =(e) => {
+    const onChange = (e) => {
         const value = e.target.value;
 
-        if (value ==='0') {
+        if (value === '0') {
             dispatch({
                 type: REMOVE_FROM_CART,
                 _id: item._id
@@ -36,24 +36,27 @@ const CartItem = ({ item }) => {
     };
 
     return (
-        <div className="flex-row">
+        <div>
             <div>
-                <img
-                    src={`/images/${item.image}`}
-                    alt=""
-                />
-            </div>
-            <div>
-                <div>{item.name}, ${item.price}</div>
                 <div>
-                    <span>Qty:</span>
-                    <input
-                        type="number"
-                        placeholder="1"
-                        value={item.purchaseQuantity}
-                        onChange={onChange}
+                    <img
+                        src={`/images/${item.image}`}
+                        alt=""
                     />
-                    <button onClick={() => removeFromCart(item)}>Remove</button>
+                    <div>{item.name}, ${item.price}</div>
+                </div>
+                <div>
+
+                    <div>
+                        <span>Qty: </span>
+                        <input
+                            type="number"
+                            placeholder="1"
+                            value={item.purchaseQuantity}
+                            onChange={onChange}
+                        />
+                        <button className="btn btn-danger" onClick={() => removeFromCart(item)}>Remove</button>
+                    </div>
                 </div>
             </div>
         </div>
