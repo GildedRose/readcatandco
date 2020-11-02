@@ -83,7 +83,8 @@ const resolvers = {
                 });
 
                 line_items.push({
-                    price: price.id
+                    price: price.id,
+                    quantity: 1
                 });
             }
 

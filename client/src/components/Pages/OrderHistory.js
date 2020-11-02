@@ -21,9 +21,9 @@ function OrderHistory() {
                         {user.orders.map((order) => (
                             <div key={order._id} className="my-2">
                                 <h3>{new Date(parseInt(order.purchaseDate)).toLocaleDateString()}</h3>
-                                <Link to="/profile">
+                                {/* <Link to="/profile">
                                     ← Back to Profile
-                                </Link>
+                                </Link> */}
                                 <div className="flex-row">
                                     {order.products.map(({ _id, image, name, price }, index) => (
                                         <div key={index} className="card px-1 py-1">
