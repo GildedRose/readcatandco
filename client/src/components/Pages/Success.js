@@ -30,9 +30,9 @@ function Success() {
     }, [addOrder]);
 
     return (
-        <div class="text-center">
+        <div className="text-center">
             <br />
-            <h1><i class="far fa-check-circle"></i></h1>
+            <h1><i className="far fa-check-circle"></i></h1>
             <h2>Thank you for your purchase.</h2>
             <br />
             <h1>Your order was successfully placed!</h1>

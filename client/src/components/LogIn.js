@@ -43,9 +43,9 @@ const LogIn = props => {
           <div>
             <img src={require('./../assets/images/RedCat.png')} width="100%" height="100%" alt="The Red Cat and Co in retro style" />
           </div>
-          <div class="text-center">
-            <h2 class="h3 mb-3 font-weight-normal">Please Log In</h2>
-            <form onSubmit={handleFormSubmit} class="form-signin">
+          <div className="text-center">
+            <h2 className="h3 mb-3 font-weight-normal">Please Log In</h2>
+            <form onSubmit={handleFormSubmit} className="form-signin">
               <input                                                                                                                                                        
                 className='form-input form-signin'
                 placeholder='Email Address'
@@ -64,7 +64,7 @@ const LogIn = props => {
                 value={formState.password}
                 onChange={handleChange}
               />
-              <button class="btn btn-lg btn-danger btn-block" type='submit'>
+              <button className="btn btn-lg btn-danger btn-block" type='submit'>
                 Submit
             </button>
             </form>
