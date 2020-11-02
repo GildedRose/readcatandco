@@ -3,19 +3,19 @@ import React from 'react';
 
 export const About = () => (
   <div>
-    <div class="container">
-        <div class="row">
-          <div class="col-lg-6">
+    <div className="container">
+        <div className="row">
+          <div className="col-lg-6">
             
           </div>
         </div>
     </div>
-    <div class="album py-5 bg-white">
-      <div class="container">
-        <div class="row">
-          <div class="col-md-6">
-              <div class="card mb-6">
-                <h5 class="text-center">About the Owner</h5>
+    <div className="album py-5 bg-white">
+      <div className="container">
+        <div className="row">
+          <div className="col-md-6">
+              <div className="card mb-6">
+                <h5 className="text-center">About the Owner</h5>
                   <p>After relocating from New York to South Texas, Jessica found herself nostalgic for home. While San Antonio harbored trendy little shops, it lacked the same abundance of locally made merchantiles New York City offered.</p>             
                   
                   <p>Wistful, but determined to bring a touch of home to San Antonio, she set out on a mission to bring local goods together in one cozy location: Red Cat & Co.</p>
@@ -26,9 +26,9 @@ export const About = () => (
               </div>
           </div>  
           
-          <div class="col-md-6">
-            <div class="card mb-6">
-              <p class="text-center"><br /><img src={require('../assets/images/owner1280x.jpg')} class="text-center border" width="85%" alt="Owner" /><br /></p>
+          <div className="col-md-6">
+            <div className="card mb-6">
+              <p className="text-center"><br /><img src={require('../assets/images/owner1280x.jpg')} className="text-center border" width="85%" alt="Owner" /><br /></p>
             </div>
           </div>
         </div>

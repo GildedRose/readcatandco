@@ -41,14 +41,14 @@ function ProductItem(item) {
   };
 
   return (
-    <div class="card mb-4 shadow-sm" width="400px">
+    <div className="card mb-4 shadow-sm" width="400px">
       <Link to={`/products/${_id}`}>
         <img
-          class="card-img-top" display="block" width="400px" height="100%"
+          className="card-img-top" display="block" width="400px" height="100%"
           alt={name}
           src={`/images/${image}`}
         />
-        <p class="text-center">{name}</p>
+        <p className="text-center">{name}</p>
       </Link>
       <div>
         <div>{quantity} in stock</div>
@@ -56,6 +56,7 @@ function ProductItem(item) {
       </div>
       <button onClick={addToCart}>Add to cart</button>
     </div>
+    
   );
 }
 

@@ -16,7 +16,7 @@ const Profile = props => {
     const { loading, data } = useQuery(userParam ? QUERY_USER : QUERY_ME, {
         variables: { email: userParam }
     });
-
+    console.log(data)
 
     const user = data?.me || data?.user || {};
 
@@ -38,25 +38,26 @@ const Profile = props => {
 
     return (
         <div>
-            <h1 class="text-center">{user.firstName}'s Account</h1>
+            <h1 className="text-center">{user.firstName} {user.lastName}'s Account</h1>
             <div className="container my-1">
 
                 {user ? (
                     <>
-                        <h3 class="text-center">Order History</h3>
+                        <h3 className="text-center">Order History</h3>
                         {user.orders.map((order) => (
                             <div key={order._id} className="my-2">
-                               <h4><i class="fa fa-cart-arrow-down" aria-hidden="true"></i> {new Date(parseInt(order.purchaseDate)).toLocaleDateString("en-US", options)}</h4>
-                                {/* <Link to="/profile">
-                                    ← Back to Profile
-                                </Link> */}
+                               <Link to="/">
+                                    ← Back to Home
+                                </Link>
+                                <h4><i className="fa fa-cart-arrow-down" aria-hidden="true"></i> {new Date(parseInt(order.purchaseDate)).toLocaleDateString("en-US", options)}</h4>
+                                
                                 <div className="flex-row">
                                     {order.products.map(({ _id, image, name, price }, index) => (
                                         <div key={index} className="card px-1 py-1">
                                             <Link to={`/products/${_id}`}>
                                                 <img
-                                                    alt={name}
                                                     src={`/images/${image}`}
+                                                    alt={name}
                                                 />
                                                 <p>{name}</p>
                                             </Link>
