@@ -18,6 +18,10 @@ This is an interactive MERN stack single page application (SPA) fulfilling clien
 ## Installation
 Download a copy of this repo to a directory of your choice. To install, you will need to run `npm i` or `npm install` to get all the dependencies running. Following proper installation of the dependencies, you will type `npm start` on the root directory terminal to start the server.
 
+To stop the server you will need to use the existing terminal to execute `CTRL+C` followed by `Y` for confirmation to terminate the connection to localhost.
+
+Please see documentation on your own host's server commands should you run this on a live instance rather than locally.
+
 ## Usage
 Be sure all repository files were successfully cloned to server and a connection to the database is complete.
 
