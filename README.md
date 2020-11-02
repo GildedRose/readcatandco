@@ -23,6 +23,8 @@ Be sure all repository files were successfully cloned to server and a connection
 
 Customers will have the ability to create an account through a signup form found on the `Navigation Bar` whereupon users can add items to their cart if so desired. Utilization of the `Navigation Bar` or homepage buttons will help customers select shopping items for purchase. Once items are stored in the cart, customers will be able to checkout via Stripe before being redirected back to the `Red Cat & Co` website. 
 
+Interactive MERN Stack SPA Live Demo: https://mysterious-island-01047.herokuapp.com/
+
 ![RedCat&Co Demo Shot 1](directory/path)
 
 Text

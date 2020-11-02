@@ -6,7 +6,7 @@ export const About = () => (
     <div class="container">
         <div class="row">
           <div class="col-lg-6">
-            <img src={require('../assets/images/redcat.jpeg')} width="75%" height="75%" alt="Landscape view of owner and bus" />
+            
           </div>
         </div>
     </div>
@@ -17,11 +17,8 @@ export const About = () => (
             
               <div class="card mb-6">
                 <h5 class="text-center">About the Owner</h5>
-                
-                Text examples
-
-                <p>After relocating from New York to South Texas, Jessica found herself nostalgic for home. While San Antonio harbored trendy little shops, it lacked the same abundance of locally made merchantiles New York City offered.</p>
-                                
+                  <p>After relocating from New York to South Texas, Jessica found herself nostalgic for home. While San Antonio harbored trendy little shops, it lacked the same abundance of locally made merchantiles New York City offered.</p>             
+                  
                   <p>Wistful, but determined to bring a touch of home to San Antonio, she set out on a mission to bring local goods together in one cozy location: Red Cat & Co.</p>
 
                   <p>Intent on sharing her love of independent artists' merchandise with her newfound home, she branched out and found like-minded quirky business owners in the area. With a love of fun and unique items, Red Cat & Co became a central location for items unavailable elsewhere.</p>
