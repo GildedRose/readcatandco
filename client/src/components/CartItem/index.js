@@ -36,26 +36,28 @@ const CartItem = ({ item }) => {
     };
 
     return (
-        <div>
-            <div>
-                <div>
-                    <img
-                        src={`/images/${item.image}`}
-                        alt=""
-                    />
-                    <div>{item.name}, ${item.price}</div>
-                </div>
-                <div>
-
+        <div className="grid">
+            <div className="containter">
+                <div className="py-3 card col-lg ">
                     <div>
-                        <span>Qty: </span>
-                        <input
-                            type="number"
-                            placeholder="1"
-                            value={item.purchaseQuantity}
-                            onChange={onChange}
+                        <img
+                            src={`/images/${item.image}`}
+                            alt=""
                         />
-                        <button className="btn btn-danger" onClick={() => removeFromCart(item)}>Remove</button>
+                        <div>{item.name}, ${item.price}</div>
+                    </div>
+                    <div>
+
+                        <div className="d-flex align-items-center justify-content-center ">
+                            <span>Qty: </span>
+                            <input
+                                type="number"
+                                placeholder="1"
+                                value={item.purchaseQuantity}
+                                onChange={onChange}
+                            />
+                            <button className="btn btn-danger" onClick={() => removeFromCart(item)}>Remove</button>
+                        </div>
                     </div>
                 </div>
             </div>

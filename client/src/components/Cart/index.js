@@ -77,11 +77,11 @@ const Cart = () => {
                             {state.cart.map(item => (
                                 <CartItem key={item._id} className="row" item={item} />
                             ))}
-                            <div className="col">
-                                Total: ${calculateTotal()}
+                            <div className="py-1">
+                                <h4>Total: ${calculateTotal()}</h4>
                                 {
                                     Auth.loggedIn() ?
-                                        <button className="btn btn-lg btn-danger btn-block" onClick={submitCheckout}>
+                                        <button className="btn btn-lg btn-danger " onClick={submitCheckout}>
                                             Checkout
                                 </button>
                                         :
