@@ -33,7 +33,7 @@ function ProductList() {
 
 
     return (
-        <div className="my-2">
+        <div className="my-2 ">
           {state.products.length ? (
             <div>
                 {filterProducts().map(product => (

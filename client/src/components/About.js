@@ -12,10 +12,11 @@ export const About = () => (
     </div>
     <div className="album py-5 bg-white">
       <div className="container">
+      <h2 className="text-center"><img src={require('../assets/images/About.png')} width="50%" height="50%" alt="Shopping Cart Header" /></h2>
         <div className="row">
           <div className="col-md-6">
               <div className="card mb-6">
-                <h5 className="text-center">About the Owner</h5>
+                {/* <h5 className="text-center">About the Owner</h5> */}
                   <p>After relocating from New York to South Texas, Jessica found herself nostalgic for home. While San Antonio harbored trendy little shops, it lacked the same abundance of locally made merchantiles New York City offered.</p>             
                   
                   <p>Wistful, but determined to bring a touch of home to San Antonio, she set out on a mission to bring local goods together in one cozy location: Red Cat & Co.</p>

@@ -2,7 +2,7 @@ import React, { useEffect } from 'react';
 import CartItem from '../CartItem';
 import Auth from '../../utils/auth';
 import { useStoreContext } from '../../utils/GlobalState';
-import { TOGGLE_CART, ADD_MULTIPLE_TO_CART } from '../../utils/actions';
+import { ADD_MULTIPLE_TO_CART } from '../../utils/actions';
 import { idbPromise } from '../../utils/indexedDB';
 import { loadStripe } from '@stripe/stripe-js';
 import { QUERY_CHECKOUT } from '../../utils/queries';
@@ -38,10 +38,6 @@ const Cart = () => {
         }
     }, [data]);
 
-    function toggleCart() {
-        dispatch({ type: TOGGLE_CART });
-    }
-
     function calculateTotal() {
         let sum = 0;
         state.cart.forEach(item => {
@@ -69,7 +65,7 @@ const Cart = () => {
 
     return (
         <div className="text-center">
-            <h2>Shopping Cart</h2>
+            <h2 className="text-center"><img src={require('../../assets/images/ShopCart.png')} width="50%" height="50%" alt="Shopping Cart Header" /></h2>
             <div className="d-flex justify-content-center">
                 <div>
                     {state.cart.length ? (
