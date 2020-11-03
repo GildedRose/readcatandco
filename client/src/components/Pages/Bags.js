@@ -43,7 +43,7 @@ export const Bags = () => {
                  }
     },
      [categoryData, loading, dispatch]);
-console.log("I LOVE CHRIS")
+console.log("testing")
      return (
             <div>
 

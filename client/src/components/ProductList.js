@@ -6,6 +6,7 @@ import { UPDATE_PRODUCTS } from '../utils/actions';
 import SingleItem from './SingleItem';
 import { QUERY_PRODUCTS } from '../utils/queries';
 
+
 function ProductList() {
 
     const [state, dispatch] = useStoreContext();
@@ -47,7 +48,7 @@ function ProductList() {
                       price={product.price}
                       quantity={product.quantity}
                     />
-                    </div>
+                </div>
                 ))}
                 
             </div>

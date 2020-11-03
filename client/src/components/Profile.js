@@ -52,25 +52,28 @@ const Profile = props => {
                                 </Link> */}
                                 <br />
                                 <h4><i className="fa fa-cart-arrow-down" aria-hidden="true"></i> {new Date(parseInt(order.purchaseDate)).toLocaleDateString("en-US", options)}</h4>
-                                
-                                <div className="d-flex flex-wrap">
-                                    {order.products.map(({ _id, image, name, price }, index) => (
-                                        <div key={index} className="card w-50 p-2 ordercard">
-                                            <Link to={`/products/${_id}`}>
-                                                <p className="text-center">{name}</p>
-                                                <img
-                                                    src={`/images/${image}`}
-                                                    alt={name}
-                                                    className="profileimg"
-                                                />
-                                                
-                                            </Link>
-                                            <div>
-                                                <span>${price}</span>
+                                {/* <button class="dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"></button> */}
+                                {/* <div className="d-flex flex-wrap dropdown-menu" aria-labelledby="dropdownMenuButton"> */}
+                                    {/* <div className="dropdown-item"> */}
+                                    <div className="d-flex flex-wrap">
+                                        {order.products.map(({ _id, image, name, price }, index) => (
+                                            <div key={index} className="card w-50 p-2 ordercard">
+                                                <Link to={`/products/${_id}`}>
+                                                    <p className="text-center lead">{name}</p>
+                                                    <img
+                                                        src={`/images/${image}`}
+                                                        alt={name}
+                                                        className="rounded mx-auto d-block profileimg"
+                                                    />
+                                                    
+                                                </Link>
+                                                <div>
+                                                    <br /><p className="text-center">${price}.00</p>
+                                                </div>
                                             </div>
-                                        </div>
-                                        
-                                    ))}
+                                            
+                                        ))}
+                                    {/* </div> */}
                                 </div><br />
                             </div>
                         ))}
