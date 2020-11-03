@@ -15,10 +15,10 @@ const CartItem = ({ item }) => {
         idbPromise('cart', 'delete', { ...item });
     };
 
-    const onChange =(e) => {
+    const onChange = (e) => {
         const value = e.target.value;
 
-        if (value ==='0') {
+        if (value === '0') {
             dispatch({
                 type: REMOVE_FROM_CART,
                 _id: item._id
@@ -36,24 +36,29 @@ const CartItem = ({ item }) => {
     };
 
     return (
-        <div className="flex-row">
-            <div>
-                <img
-                    src={`/images/${item.image}`}
-                    alt=""
-                />
-            </div>
-            <div>
-                <div>{item.name}, ${item.price}</div>
-                <div>
-                    <span>Qty:</span>
-                    <input
-                        type="number"
-                        placeholder="1"
-                        value={item.purchaseQuantity}
-                        onChange={onChange}
-                    />
-                    <button onClick={() => removeFromCart(item)}>Remove</button>
+        <div className="grid">
+            <div className="containter">
+                <div className="py-3 card col-lg ">
+                    <div>
+                        <img
+                            src={`/images/${item.image}`}
+                            alt=""
+                        />
+                        <div>{item.name}, ${item.price}</div>
+                    </div>
+                    <div>
+
+                        <div className="d-flex align-items-center justify-content-center ">
+                            <span>Qty: </span>
+                            <input
+                                type="number"
+                                placeholder="1"
+                                value={item.purchaseQuantity}
+                                onChange={onChange}
+                            />
+                            <button className="btn btn-danger" onClick={() => removeFromCart(item)}>Remove</button>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>

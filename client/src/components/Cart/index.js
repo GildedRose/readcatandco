@@ -7,6 +7,7 @@ import { idbPromise } from '../../utils/indexedDB';
 import { loadStripe } from '@stripe/stripe-js';
 import { QUERY_CHECKOUT } from '../../utils/queries';
 import { useLazyQuery } from '@apollo/react-hooks';
+import './Cart.css';
 
 const stripePromise = loadStripe('pk_test_TYooMQauvdEDq54NiTphI7jx');
 
@@ -67,26 +68,30 @@ const Cart = () => {
 
 
     return (
-        <div className="cart">
+        <div className="text-center">
             <h2>Shopping Cart</h2>
-            {state.cart.length ? (
+            <div className="d-flex justify-content-center">
                 <div>
-                    {state.cart.map(item => (
-                        <CartItem key={item._id} item={item} />
-                    ))}
-                    <div>
-                        Total: ${calculateTotal()}
-                        {
-                            Auth.loggedIn() ?
-                                <button onClick={submitCheckout}>
-                                    Checkout
+                    {state.cart.length ? (
+                        <div className="col">
+                            {state.cart.map(item => (
+                                <CartItem key={item._id} className="row" item={item} />
+                            ))}
+                            <div className="py-1">
+                                <h4>Total: ${calculateTotal()}</h4>
+                                {
+                                    Auth.loggedIn() ?
+                                        <button className="btn btn-lg btn-danger " onClick={submitCheckout}>
+                                            Checkout
                                 </button>
-                                :
-                                <span>(log in to check out)</span>
-                        }
-                    </div>
+                                        :
+                                        <span>(log in to check out)</span>
+                                }
+                            </div>
+                        </div>
+                    ) : (<h3>Empty</h3>)}
                 </div>
-            ) : (<h3>Empty</h3>)}
+            </div>
         </div>
     );
 };
