@@ -37,6 +37,23 @@ const Profile = props => {
         )
     }
 
+    function calculateTotal() {
+        let sum = 0;
+
+        user.orders.map((order) => {
+            sum += order.products.price * order.products.puchseQuantity
+        })
+        console.log(sum);
+        return sum.toFixed(2);
+        
+
+        // user.order.products(item => {
+        //     sum += item.price * item.purchaseQuantity;
+        // });
+
+        // return sum.toFixed(2);
+    }
+
     return (
         <div>
             <h1 className="text-center">{user.firstName} {user.lastName}'s Account</h1>

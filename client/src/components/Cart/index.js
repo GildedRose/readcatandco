@@ -2,11 +2,12 @@ import React, { useEffect } from 'react';
 import CartItem from '../CartItem';
 import Auth from '../../utils/auth';
 import { useStoreContext } from '../../utils/GlobalState';
-import { TOGGLE_CART, ADD_MULTIPLE_TO_CART } from '../../utils/actions';
+import { ADD_MULTIPLE_TO_CART } from '../../utils/actions';
 import { idbPromise } from '../../utils/indexedDB';
 import { loadStripe } from '@stripe/stripe-js';
 import { QUERY_CHECKOUT } from '../../utils/queries';
 import { useLazyQuery } from '@apollo/react-hooks';
+import './Cart.css';
 
 const stripePromise = loadStripe('pk_test_TYooMQauvdEDq54NiTphI7jx');
 
@@ -37,10 +38,6 @@ const Cart = () => {
         }
     }, [data]);
 
-    function toggleCart() {
-        dispatch({ type: TOGGLE_CART });
-    }
-
     function calculateTotal() {
         let sum = 0;
         state.cart.forEach(item => {
@@ -67,26 +64,30 @@ const Cart = () => {
 
 
     return (
-        <div className="cart">
-            <h2>Shopping Cart</h2>
-            {state.cart.length ? (
+        <div className="text-center">
+            <h2 className="text-center"><img src={require('../../assets/images/ShopCart.png')} width="50%" height="50%" alt="Shopping Cart Header" /></h2>
+            <div className="d-flex justify-content-center">
                 <div>
-                    {state.cart.map(item => (
-                        <CartItem key={item._id} item={item} />
-                    ))}
-                    <div>
-                        Total: ${calculateTotal()}
-                        {
-                            Auth.loggedIn() ?
-                                <button onClick={submitCheckout}>
-                                    Checkout
+                    {state.cart.length ? (
+                        <div className="col">
+                            {state.cart.map(item => (
+                                <CartItem key={item._id} className="row" item={item} />
+                            ))}
+                            <div className="py-1">
+                                <h4>Total: ${calculateTotal()}</h4>
+                                {
+                                    Auth.loggedIn() ?
+                                        <button className="btn btn-lg btn-danger " onClick={submitCheckout}>
+                                            Checkout
                                 </button>
-                                :
-                                <span>(log in to check out)</span>
-                        }
-                    </div>
+                                        :
+                                        <span>(log in to check out)</span>
+                                }
+                            </div>
+                        </div>
+                    ) : (<h3>Empty</h3>)}
                 </div>
-            ) : (<h3>Empty</h3>)}
+            </div>
         </div>
     );
 };
