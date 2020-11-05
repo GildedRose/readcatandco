@@ -43,7 +43,7 @@ export const Accessories = () => {
                  }
     },
      [categoryData, loading, dispatch]);
-console.log("I LOVE CHRIS")
+console.log("testing")
      return (
             <div>
                 <img src={require('../../assets/images/AccessoriesW.png')} width="100%" height="100%" alt="Accessories in retro style" />

@@ -43,12 +43,12 @@ export const HomeDecor = () => {
                  }
     },
      [categoryData, loading, dispatch]);
-console.log("I LOVE CHRIS")
+console.log("testing")
+
      return (
             <div>
-
                 <div>
-                <img src={require('../../assets/images/HomeDecor.png')} width="100%" height="100%" alt="Home Decor in retro style" />
+                    <img src={require('../../assets/images/HomeDecor.png')} width="100%" height="100%" alt="Home Decor in retro style" />
 
                 <Link to="/">
                         ← Back to Home
@@ -58,4 +58,4 @@ console.log("I LOVE CHRIS")
                 </div>
             </div>
         )
-}
+};

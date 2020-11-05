@@ -1,10 +1,11 @@
 import React, { useEffect } from 'react';
-import { Container, Row, Col } from 'react-bootstrap';
+// import { Container, Row, Col } from 'react-bootstrap';
 import { useQuery } from '@apollo/react-hooks';
 import { useStoreContext } from '../utils/GlobalState';
 import { UPDATE_PRODUCTS } from '../utils/actions';
 import SingleItem from './SingleItem';
 import { QUERY_PRODUCTS } from '../utils/queries';
+
 
 function ProductList() {
 

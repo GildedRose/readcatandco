@@ -5,9 +5,6 @@ import { ADD_USER } from '../utils/mutations';
 import Auth from '../utils/auth';
 import './LogIn.css';
 
-
-
-
 const CreateAccount = () => {
 
   const [formState, setFormState] = useState({firstName: '', lastName: '', email: '', password: ''});
