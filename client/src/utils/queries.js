@@ -1,8 +1,9 @@
 import gql from 'graphql-tag';
 
-export const QUERY_USER = gql `
+export const QUERY_USER = gql`
     query user($email: String!) {
         user(email: $email) {
+            _id
             firstName
             lastName
             email
@@ -14,12 +15,33 @@ export const QUERY_USER = gql `
                 name
                 description
                 price
-                quantity
                 image
               }
             }
         }
     }
+`;
+
+export const QUERY_ME = gql`
+  {
+    me {
+      _id
+      firstName
+      lastName
+      email
+      orders {
+        _id
+        purchaseDate
+        products {
+          _id
+          name
+          description
+          price
+          image
+        }
+      }
+    }
+  }
 `;
 
 export const QUERY_PRODUCTS = gql`
@@ -32,6 +54,21 @@ export const QUERY_PRODUCTS = gql`
       image
       category {
         _id
+      }
+    }
+  }
+`;
+
+export const QUERY_ALL_PRODUCTS = gql`
+  {
+    products {
+      _id
+      name
+      description
+      price
+      quantity
+      category {
+        name
       }
     }
   }

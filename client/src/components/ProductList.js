@@ -1,15 +1,17 @@
 import React, { useEffect } from 'react';
+// import { Container, Row, Col } from 'react-bootstrap';
 import { useQuery } from '@apollo/react-hooks';
 import { useStoreContext } from '../utils/GlobalState';
 import { UPDATE_PRODUCTS } from '../utils/actions';
 import SingleItem from './SingleItem';
 import { QUERY_PRODUCTS } from '../utils/queries';
 
+
 function ProductList() {
 
     const [state, dispatch] = useStoreContext();
     const { currentCategory } = state;
-    const { loading, data } = useQuery(QUERY_PRODUCTS);
+    const { data } = useQuery(QUERY_PRODUCTS);
 
     useEffect(() => {
         if (data) {
@@ -32,14 +34,13 @@ function ProductList() {
 
 
     return (
-        <div className="my-2">
+        <div className="my-2 ">
           {state.products.length ? (
-            <div className="row">
-              <div className="col md-4">
+            <div>
                 {filterProducts().map(product => (
                   <div>
                     <SingleItem
-                      key= {product._id}
+                      key={product._id}
                       _id={product._id}
                       image={product.image}
                       name={product.name}
@@ -47,11 +48,10 @@ function ProductList() {
                       price={product.price}
                       quantity={product.quantity}
                     />
-                    </div>
-                ))}
                 </div>
+                ))}
+                
             </div>
-            
           ) : (
             <h3>You haven't added any products yet!</h3>
           )}

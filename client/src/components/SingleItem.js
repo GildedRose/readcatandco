@@ -3,6 +3,7 @@ import { Link } from "react-router-dom";
 import { useStoreContext } from '../utils/GlobalState';
 import { ADD_TO_CART, UPDATE_CART_QUANTITY } from '../utils/actions';
 import { idbPromise } from "../utils/indexedDB";
+import './SingleItem.css';
 
 function ProductItem(item) {
   const {
@@ -10,7 +11,7 @@ function ProductItem(item) {
     name,
     _id,
     price,
-    description,
+    // description,
     quantity
   } = item;
 
@@ -41,14 +42,14 @@ function ProductItem(item) {
   };
 
   return (
-    <div class="card mb-4 shadow-sm" width="400px">
+    <div className="card mb-4 shadow-sm" width="400px">
       <Link to={`/products/${_id}`}>
         <img
-          class="card-img-top" width="400px"
+          className="card-img-top" display="block" width="400px" height="100%" 
           alt={name}
           src={`/images/${image}`}
         />
-        <p class="text-center">{name}</p>
+        <p className="text-center">{name}</p>
       </Link>
       <div>
         <div>{quantity} in stock</div>
@@ -56,6 +57,7 @@ function ProductItem(item) {
       </div>
       <button onClick={addToCart}>Add to cart</button>
     </div>
+    
   );
 }
 

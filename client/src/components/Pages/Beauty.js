@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { useQuery, refetch } from '@apollo/react-hooks';
+import { Link } from "react-router-dom";
 import { QUERY_CATEGORIES } from "../../utils/queries";
 import { useStoreContext } from "../../utils/GlobalState";
 import { UPDATE_CATEGORIES, UPDATE_CURRENT_CATEGORY } from '../../utils/actions';
@@ -42,10 +43,20 @@ export const Beauty = () => {
                  }
     },
      [categoryData, loading, dispatch]);
-console.log("I LOVE CHRIS")
+console.log("testing")
      return (
             <div>
+
+                <div>
+                <img src={require('../../assets/images/BeautyW.png')} width="100%" height="100%" alt="Beauty in retro style" />
+            
+
+                <Link to="/">
+                        ← Back to Home
+                </Link>
+
                 <ProductList />
+                </div>
             </div>
         )
 }

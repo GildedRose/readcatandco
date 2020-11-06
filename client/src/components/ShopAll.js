@@ -1,25 +1,12 @@
 import React from 'react';
-import { Container, Row, Col } from 'react-bootstrap';
+import { Container } from 'react-bootstrap';
 import ProductList from './ProductList';
-import Category from './Category';
-import Cart from './Cart';
-
-
-
 
 export const ShopAll = () => (
   <Container>
-    <Row>
-      <Col>
-      <div>
-          <h2>Shop All</h2> 
-          <Category />
-          <ProductList />
-          <p></p>  
-
+        <div>
+            <img src={require('./../assets/images/ShopAll.png')} width="100%" height="100%" alt="Shop All in retro style" />
         </div>
-      </Col>
-    </Row>
-  </Container>
-        
+      <ProductList />
+  </Container>     
 )
